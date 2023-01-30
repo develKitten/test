@@ -5,11 +5,6 @@
 
 ul, li { list-style: none; }
 
-a {
-    color:inherit;
-    text-decoration: none;
-}
-
 .V2_manu {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -23,6 +18,10 @@ a {
     padding-bottom: 5px;
     border: none;
     background-color: rgba(229, 229, 229, 0.388);
+}
+
+.back_button:hover {
+    background-color: rgba(229, 229, 229, 0.921);
 }
 
 
@@ -73,7 +72,7 @@ h3 {
     background-color: rgba(224, 224, 224, 0.736);
 }
 
-.cardImg_1 { background: url(./V2_IMG/v2_img.PNG); }
-.cardImg_2 { background: url(./V2_IMG/v2_plus_1_0_img.PNG); }
-.cardImg_3 { background: url(./V2_IMG/v2_plus_1_2_img.PNG); }
-.cardImg_4 { background: url(./V2_IMG/v2_plus_1_5_img.PNG); }
+.cardImg_1 { background: url(./v3_img/V1.png); }
+.cardImg_2 { background: url(./v3_img/v2_img.PNG); }
+.cardImg_3 { background: url(./v3_img/v2_plus_1_2_img.PNG); }
+.cardImg_4 { background: url(./v3_img/V3.png); }
