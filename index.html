@@ -1,36 +1,12 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Virus Simulator</title>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>js-dos 6.22, Digger</title>
-  <script src="https://js-dos.com/6.22/current/js-dos.js"></script>
-  <style>
-    html, body, canvas, .dosbox-container {
-      width: 100%;
-
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
-  </style>
-</head>
-
-<body>
-  <canvas id="jsdos"></canvas>
-  <script>
-    Dos(document.getElementById("jsdos"), {
-        wdosboxUrl: "https://js-dos.com/6.22/current/wdosbox.js",
-        cycles: 1000,
-        autolock: false,
-    }).ready(function (fs, main) {
-      fs.extract("https://raw.githack.com/develKitten/test/main/V2.zip").then(function () {
-        main(["-c", "V2.COM"]).then(function (ci) {
-            window.ci = ci;
-        });
-      });
-    });
-  </script>
-</body>
-
+  <body>
+    <canvas id="jsdos"></canvas>
+    <a href="./vaccine/V2/V2List.html">go</a>
+  </body>
 </html>
