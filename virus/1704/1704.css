@@ -1,0 +1,24 @@
+html, body, canvas, .dosbox-container {
+    width: 100%;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+body {
+    background-color: black;
+}
+
+.back {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    padding: 10px;
+    background-color: white;
+}
+
+.back:hover {
+    background-color: rgb(238, 238, 238);
+}
