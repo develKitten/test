@@ -1,62 +1,131 @@
-* { margin: 0px; }
+* {
+  margin: 0px;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
 p {
-    padding-top: 100px;
-    padding-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .title_ {
-    text-align: center;
-    color :rgb(62, 62, 62);
-    font-family: Times, Times New Roman, Georgia, serif;
+  text-align: center;
+  color: rgb(62, 62, 62);
+  font-family: Times, Times New Roman, Georgia, serif;
 }
 
 .con_1 {
-    text-align: center;
-    color:white;
-    font-size: 50px;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.662);
+  margin-top: 20vh;
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.662);
 }
 
 .con_2 {
-    margin-top: 10px;
-    text-align: center;
-    color:white;
-    font-size: 20px;
-    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.662);;
+  margin-top: 3vh; /* 기존: margin-top: 10vh; */
+  margin-bottom: 10vh; /* 추가 */
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.662);
 }
 
 .site_title {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.314);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.314);
+  display: block;
 }
 
-.virus .vaccine {
-    padding-top: 300px;
-    padding-bottom: 300px;
-    width: 100%;
+.virus,
+.vaccine {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.314),
+      rgba(255, 255, 255, 0.314)
+    ),
+    url(./virus_img.jpg);
 }
 
-
-.virus {
-    background-repeat: no-repeat;
+@media only screen and (min-width: 913px) {
+  /* PC 버전 */
+  .container {
+    flex-direction: row; /* 자식 요소들을 수평 방향으로 정렬 */
+  }
+  .virus,
+  .vaccine {
+    display: inline-block;
+    vertical-align: top;
+    width:50%;
+    height: calc(100vh - 100px);
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .virus {
     background-position: 50% 50%;
-    background-size: cover;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.314), rgba(255, 255, 255, 0.314)), url(./virus_img.jpg);
-}
-.vaccine { 
-    background-repeat: no-repeat;
+  }
+  .vaccine {
     background-position: 10% 30%;
-    background-size: cover;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.314), rgba(255, 255, 255, 0.314)), url(./vaccine_img.png);
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.314),
+        rgba(255, 255, 255, 0.314)
+      ),
+      url(./vaccine_img.png);
+  }
+}
+
+@media only screen and (max-width: 912px) {
+  /* 모바일 버전 */
+  .virus,
+  .vaccine {
+    width:100%;
+    display: block;
+    height: 50vh;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .virus {
+    background-position: 50% 0;
+  }
+  .vaccine {
+    background-position: 10% 30%;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.314),
+        rgba(255, 255, 255, 0.314)
+      ),
+      url(./vaccine_img.png);
+  }
+  .con_1,
+  .con_2 {
+    margin-top: 20px; 
+  }
 }
 
 .virus:hover {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.314), rgba(0, 0, 0, 0.314)), url(./virus_img.jpg);
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.314),
+      rgba(0, 0, 0, 0.314)
+    ),
+    url(./virus_img.jpg);
 }
 
 .vaccine:hover {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.314), rgba(0, 0, 0, 0.314)), url(./vaccine_img.png);
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.314),
+      rgba(0, 0, 0, 0.314)
+    ),
+    url(./vaccine_img.png);
 }
