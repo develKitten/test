@@ -89,6 +89,9 @@ p {
 
 @media only screen and (max-width: 912px) {
   /* 모바일 버전 */
+    .container {
+      flex-direction: column;
+  }
   .virus,
   .vaccine {
     width:100%;
