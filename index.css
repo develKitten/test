@@ -3,7 +3,7 @@
 }
 
 body {
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -13,7 +13,7 @@ body {
   flex-direction: column;
 }
 
-p {
+.section {
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -89,14 +89,15 @@ p {
 
 @media only screen and (max-width: 912px) {
   /* 모바일 버전 */
-    .container {
-      flex-direction: column;
+  .container {
+    display: flex;
+    flex-direction: column;
   }
   .virus,
   .vaccine {
-    width:100%;
     display: block;
-    height: 50vh;
+    width:100%;
+    height: auto; 
     padding-top: 0;
     padding-bottom: 0;
   }
