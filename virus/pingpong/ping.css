@@ -20,6 +20,16 @@ body {
     height: 100%;
 }
 
+/* canvas가 찌그러지지 않도록 유지 */
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+    overflow: hidden;
+}
+
 #jsdos {
     position: absolute;
     top: 0;
@@ -44,71 +54,24 @@ body {
     background-color: rgb(238, 238, 238);
 }
 
-/* iPhone portrait */
-@media only screen and (max-device-width: 375px) and (orientation: portrait) {
-    /* iPhone 스타일 */
-    .dosbox-container {
-      transform: rotate(90deg);
-      transform-origin: top left;
-      width: 100vh;
-      height: 100vw;
-      overflow: hidden;
-    }
-}
-
-/* iPhone landscape */
-@media only screen and (max-device-width: 812px) and (orientation: landscape) {
-    /* iPhone 스타일 */
-    .dosbox-container {
-      transform: none;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-}
-
-/* Samsung phone portrait */
-@media only screen and (max-device-width: 360px) and (orientation: portrait) {
-    /* Samsung phone 스타일 */
-    .dosbox-container {
-      transform: rotate(90deg);
-      transform-origin: top left;
-      width: 100vh;
-      height: 100vw;
-      overflow: hidden;
-    }
-}
-
-/* Samsung phone landscape */
+/* 모바일 가로 화면에서 회전 */
 @media only screen and (max-device-width: 740px) and (orientation: landscape) {
-    /* Samsung phone 스타일 */
-    .dosbox-container {
-      transform: rotate(90deg);
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-}
-
-/* iPad portrait */
-@media only screen and (min-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-    /* iPad 스타일 */
-    .dosbox-container {
+    #jsdos {
       transform: rotate(90deg);
       transform-origin: top left;
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
     }
-}
 
-/* iPad landscape */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-    /* iPad 스타일 */
-    .dosbox-container {
-      transform: none;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
+    /* 버튼을 옆에 뜨도록 변경 */
+    .back {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 20px;
+        padding: 10px;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        z-index: 2;
     }
 }
+  
