@@ -8,6 +8,18 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
   setCookie("alertClosed", "true", 30);
 }
 
+Dos(document.getElementById("jsdos"), {
+    wdosboxUrl: "https://js-dos.com/6.22/current/wdosbox.js",
+    cycles: 1000,
+    autolock: false,
+}).ready(function (fs, main) {a
+  fs.extract("https://raw.githack.com/develKitten/test/main/virus/pingpong/pingpong.zip").then(function () {
+    main(["-c", "PINGPONG.bat"]).then(function (ci) {
+        window.ci = ci;
+    });
+  });
+});
+
 function setCookie(cname, cvalue, exdays) {
   const d = new Date();
   d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
