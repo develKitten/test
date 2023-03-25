@@ -90,8 +90,8 @@ body {
 @media only screen and (max-width: 912px) {
   /* 모바일 버전 */
   .container {
-    display: flex;
-    flex-direction: column;
+    flex-direction: column; /* 자식 요소들을 수직 방향으로 정렬 */
+    height: 100%;
   }
   .virus,
   .vaccine {
