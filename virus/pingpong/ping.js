@@ -1,3 +1,7 @@
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  alert("이 웹사이트는 PC에서 최적화되어 있습니다. 모바일 환경에서는 일부 기능이 작동하지 않을 수 있습니다.");
+}
+
 Dos(document.getElementById("jsdos"), {
     wdosboxUrl: "https://js-dos.com/6.22/current/wdosbox.js",
     cycles: 1000,

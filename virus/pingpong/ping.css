@@ -54,14 +54,13 @@ canvas {
     background-color: rgb(238, 238, 238);
 }
 
-/* 모바일 가로 화면에서 회전 */
+/* Phone */
 @media only screen and (max-device-width: 740px) and (orientation: landscape) {
     #jsdos {
-      transform: rotate(90deg);
+      transform: none;
       transform-origin: top left;
     }
 
-    /* 버튼을 옆에 뜨도록 변경 */
     .back {
         font-family: 'Courier New', Courier, monospace;
         font-size: 20px;
