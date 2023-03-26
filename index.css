@@ -87,8 +87,26 @@ body {
   }
 }
 
+.virus:hover {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.314),
+      rgba(0, 0, 0, 0.314)
+    ),
+    url(./virus_img.jpg);
+}
+
+.vaccine:hover {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.314),
+      rgba(0, 0, 0, 0.314)
+    ),
+    url(./vaccine_img.png);
+}
+
+/* 반응형 웹 페이지 */
+
+/* 모바일 페이지 공통 */
 @media only screen and (max-width: 912px) {
-  /* 모바일 버전 */
   .container {
     flex-direction: column; /* 자식 요소들을 수직 방향으로 정렬 */
     height: 100%;
@@ -118,18 +136,54 @@ body {
   }
 }
 
-.virus:hover {
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.314),
-      rgba(0, 0, 0, 0.314)
-    ),
-    url(./virus_img.jpg);
+/* iPhone X, XS, 11 Pro 및 기타 모던 스마트폰을 위한 미디어 쿼리 */
+@media only screen and (max-width: 375px) {
+  .con_1 {
+    font-size: 35px;
+  }
+  .con_2 {
+    font-size: 16px;
+  }
+  .title_ {
+    font-size: 24px;
+  }
 }
 
-.vaccine:hover {
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.314),
-      rgba(0, 0, 0, 0.314)
-    ),
-    url(./vaccine_img.png);
+/* Samsung Galaxy S9, S10 및 기타 모던 스마트폰을 위한 미디어 쿼리 */
+@media only screen and (max-width: 414px) {
+  .con_1 {
+    font-size: 40px;
+  }
+  .con_2 {
+    font-size: 18px;
+  }
+  .title_ {
+    font-size: 26px;
+  }
+}
+
+/* iPad 및 태블릿을 위한 미디어 쿼리 */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .con_1 {
+    font-size: 45px;
+  }
+  .con_2 {
+    font-size: 22px;
+  }
+  .title_ {
+    font-size: 32px;
+  }
+}
+
+/* Galaxy Tab 및 태블릿을 위한 미디어 쿼리 */
+@media only screen and (min-width: 800px) and (max-width: 1280px) {
+  .con_1 {
+    font-size: 45px;
+  }
+  .con_2 {
+    font-size: 22px;
+  }
+  .title_ {
+    font-size: 32px;
+  }
 }

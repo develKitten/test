@@ -24,19 +24,18 @@ ul, li { list-style: none; }
     background-color: rgba(229, 229, 229, 0.921);
 }
 
+.v2_List {
+    text-align: center;
+}
 
 .v2_List .item {
     display: inline-block;
     min-width: 300px;
     margin-left: 3%;
-}
-
-.item {
     margin-bottom: 30px;
     border: 1px solid rgb(155, 155, 155);
     box-shadow: 0px 0px 7px rgba(69, 69, 69, 0.544);
 }
-
 
 .cardImg {
     width: 100%;
@@ -74,3 +73,22 @@ h3 {
 
 .cardImg_1 { background: url(./vir_img/pingpong.jpg); }
 .cardImg_2 { background: url(./vir_img/1704.jpg); }
+
+@media screen and (min-width: 768px) {
+    .v2_List .item {
+        width: calc(50% - 6%);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .v2_List .item {
+        width: calc(33.333% - 6%);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .v2_List .item {
+        width: 100%;
+        margin-left: 0;
+    }
+}
