@@ -1,94 +1,121 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-ul, li { list-style: none; }
-
-.V2_manu {
+  }
+  
+  ul,
+  li {
+    list-style: none;
+  }
+  
+  .V2_manu {
     margin-top: 30px;
     margin-bottom: 30px;
     padding-left: 30px;
-}
-
-.back_button {
+  }
+  
+  .back_button {
     padding-left: 20px;
     padding-right: 20px;
-    padding-top:5px;
+    padding-top: 5px;
     padding-bottom: 5px;
     border: none;
     background-color: rgba(229, 229, 229, 0.388);
-}
-
-.back_button:hover {
+  }
+  
+  .back_button:hover {
     background-color: rgba(229, 229, 229, 0.921);
-}
-
-.v2_List {
+  }
+  
+  .v2_List {
     text-align: center;
-}
-
-.v2_List .item {
+  }
+  
+  .v2_List .item {
     display: inline-block;
-    min-width: 300px;
     margin-left: 3%;
     margin-bottom: 30px;
     border: 1px solid rgb(155, 155, 155);
     box-shadow: 0px 0px 7px rgba(69, 69, 69, 0.544);
-}
-
-.cardImg {
+  }
+  
+  .cardImg {
     width: 100%;
     height: 200px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
-}
-
-.cardLow {
+  }
+  
+  .cardLow {
     text-align: left;
     letter-spacing: -1px;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 20px;
-}
-
-h3 {
+  }
+  
+  h3 {
     font-size: 20px;
-}
-
-.run_btn {
+  }
+  
+  .run_btn {
     margin-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-top:5px;
+    padding-top: 5px;
     padding-bottom: 5px;
     border: none;
     background-color: rgba(229, 229, 229, 0.388);
-}
-
-.run_btn:hover {
+  }
+  
+  .run_btn:hover {
     background-color: rgba(224, 224, 224, 0.736);
-}
-
-.cardImg_1 { background: url(./vir_img/pingpong.jpg); }
-.cardImg_2 { background: url(./vir_img/1704.jpg); }
-
-@media screen and (min-width: 768px) {
+  }
+  
+  /* Add this CSS to style the pagination buttons */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    padding: 8px 16px;
+    margin: 0 4px;
+    border: none;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  .pagination button:hover {
+    background-color: #ddd;
+  }
+  
+  .pagination button.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  @media screen and (min-width: 768px) {
     .v2_List .item {
-        width: calc(50% - 6%);
+      width: calc(50% - 6%);
     }
-}
-
-@media screen and (min-width: 1024px) {
+  }
+  
+  @media screen and (min-width: 1024px) {
     .v2_List .item {
-        width: calc(33.333% - 6%);
+      width: calc(33.333% - 6%);
     }
-}
-
-@media screen and (max-width: 767px) {
+  }
+  
+  @media screen and (max-width: 767px) {
     .v2_List .item {
-        width: 100%;
-        margin-left: 0;
+      width: 100%;
+      margin-left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-}
+  }
+  
