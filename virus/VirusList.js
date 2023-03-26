@@ -1,9 +1,59 @@
 // Virus List
 const items = [
     {
+        title: "stoned",
+        imgSrc: "./vir_img/1704.jpg",
+        link: "1704/1704.html"
+    },
+    {
         title: "PingPong",
         imgSrc: "./vir_img/pingpong.jpg",
         link: "pingpong/ping.html"
+    },
+    {
+        title: "1704",
+        imgSrc: "./vir_img/1704.jpg",
+        link: "1704/1704.html"
+    },
+    {
+        title: "1704",
+        imgSrc: "./vir_img/1704.jpg",
+        link: "1704/1704.html"
+    },
+    {
+        title: "stoned",
+        imgSrc: "./vir_img/1704.jpg",
+        link: "1704/1704.html"
+    },
+    {
+        title: "PingPong",
+        imgSrc: "./vir_img/pingpong.jpg",
+        link: "pingpong/ping.html"
+    },
+    {
+        title: "1704",
+        imgSrc: "./vir_img/1704.jpg",
+        link: "1704/1704.html"
+    },
+    {
+        title: "1704",
+        imgSrc: "./vir_img/1704.jpg",
+        link: "1704/1704.html"
+    },
+    {
+        title: "stoned",
+        imgSrc: "./vir_img/1704.jpg",
+        link: "1704/1704.html"
+    },
+    {
+        title: "PingPong",
+        imgSrc: "./vir_img/pingpong.jpg",
+        link: "pingpong/ping.html"
+    },
+    {
+        title: "1704",
+        imgSrc: "./vir_img/1704.jpg",
+        link: "1704/1704.html"
     },
     {
         title: "1704",
@@ -14,7 +64,7 @@ const items = [
 
 // page
 let currentPage = 1;
-const itemsPerPage = 10;
+const itemsPerPage = 6;
 const itemList = document.getElementById("itemList");
 const paginationButtons = document.querySelectorAll(".pagination button");
 
