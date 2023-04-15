@@ -16,49 +16,9 @@ const items = [
         link: "1704/1704.html"
     },
     {
-        title: "1704",
-        imgSrc: "./vir_img/1704.jpg",
-        link: "1704/1704.html"
-    },
-    {
-        title: "stoned",
-        imgSrc: "./vir_img/1704.jpg",
-        link: "1704/1704.html"
-    },
-    {
-        title: "PingPong",
-        imgSrc: "./vir_img/pingpong.jpg",
-        link: "pingpong/ping.html"
-    },
-    {
-        title: "1704",
-        imgSrc: "./vir_img/1704.jpg",
-        link: "1704/1704.html"
-    },
-    {
-        title: "1704",
-        imgSrc: "./vir_img/1704.jpg",
-        link: "1704/1704.html"
-    },
-    {
-        title: "stoned",
-        imgSrc: "./vir_img/1704.jpg",
-        link: "1704/1704.html"
-    },
-    {
-        title: "PingPong",
-        imgSrc: "./vir_img/pingpong.jpg",
-        link: "pingpong/ping.html"
-    },
-    {
-        title: "1704",
-        imgSrc: "./vir_img/1704.jpg",
-        link: "1704/1704.html"
-    },
-    {
-        title: "1704",
-        imgSrc: "./vir_img/1704.jpg",
-        link: "1704/1704.html"
+        title: "crash",
+        imgSrc: "./vir_img/crash.png",
+        link: "crash/crash.html"
     }
 ];
 
