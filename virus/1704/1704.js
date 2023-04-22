@@ -3,7 +3,7 @@ Dos(document.getElementById("jsdos"), {
     cycles: 1000,
     autolock: false,
 }).ready(function (fs, main) {
-  fs.extract("https://raw.githack.com/develKitten/test/main/virus/1704/1704.zip").then(function () {
+  fs.extract("CASCADE.zip").then(function () {
     main(["-c", "1704.bat"]).then(function (ci) {
         window.ci = ci;
     });
