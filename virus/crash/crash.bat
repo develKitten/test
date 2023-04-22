@@ -1,4 +1,4 @@
 @ECHO OFF
 cls
 
-crash.COM
+crash.com
