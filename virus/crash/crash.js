@@ -14,7 +14,7 @@ Dos(document.getElementById("jsdos"), {
     autolock: false,
 }).ready(function (fs, main) {
   fs.extract("https://raw.githack.com/develKitten/test/main/virus/crash/crash.zip").then(function () {
-    main(["-c", "test.bat"]).then(function (ci) {
+    main(["-c", "crash.bat"]).then(function (ci) {
         window.ci = ci;
     });
   });
