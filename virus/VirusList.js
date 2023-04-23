@@ -1,11 +1,6 @@
 // Virus List
 const items = [
     {
-        title: "stoned",
-        imgSrc: "./vir_img/1704.jpg",
-        link: "1704/1704.html"
-    },
-    {
         title: "PingPong",
         imgSrc: "./vir_img/pingpong.jpg",
         link: "pingpong/ping.html"
@@ -16,9 +11,14 @@ const items = [
         link: "1704/1704.html"
     },
     {
-        title: "crash",
+        title: "Crash",
         imgSrc: "./vir_img/crash.png",
         link: "crash/crash.html"
+    },
+    {
+        title: "Ambulance",
+        imgSrc: "./vir_img/ambul.png",
+        link: "ambulance/ambul.html"
     }
 ];
 
