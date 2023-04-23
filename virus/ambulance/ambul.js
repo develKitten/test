@@ -13,8 +13,8 @@ Dos(document.getElementById("jsdos"), {
     cycles: 1000,
     autolock: false,
 }).ready(function (fs, main) {
-  fs.extract("https://raw.githack.com/develKitten/test/main/virus/ambulance/AMBUL.zip").then(function () {
-    main(["-c", "AMBUL.bat"]).then(function (ci) {
+  fs.extract("https://raw.githack.com/develKitten/test/main/virus/ambulance/ambul.zip").then(function () {
+    main(["-c", "ambul.bat"]).then(function (ci) {
         window.ci = ci;
     });
   });
