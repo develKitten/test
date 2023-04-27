@@ -1,12 +1,12 @@
 // Virus List
 const items = [
     {
-        title: "PingPong",
+        title: "핑퐁 바이러스",
         imgSrc: "./vir_img/pingpong.jpg",
         link: "pingpong/ping.html"
     },
     {
-        title: "1704",
+        title: "폭포 바이러스",
         imgSrc: "./vir_img/1704.jpg",
         link: "1704/1704.html"
     },
@@ -19,6 +19,11 @@ const items = [
         title: "Ambulance",
         imgSrc: "./vir_img/ambul.png",
         link: "ambulance/ambul.html"
+    },
+    {
+        title: "녹색 애벌레 바이러스",
+        imgSrc: "./vir_img/green.png",
+        link: "green/green.html"
     }
 ];
 
