@@ -13,7 +13,7 @@ Dos(document.getElementById("jsdos"), {
     cycles: 1000,
     autolock: false,
 }).ready(function (fs, main) {
-  fs.extract("https://raw.githack.com/develKitten/test/main/virus/green/green.zip").then(function () {
+  fs.extract("https://raw.githack.com/develKitten/test/main/virus/green/GREEN.zip").then(function () {
     main(["-c", "green.bat"]).then(function (ci) {
         window.ci = ci;
     });
