@@ -1,35 +1,40 @@
-<!doctype html>
-<html lang="kr">
+<!DOCTYPE html>
+<html lang="ko">
 
-<head>
-  <meta charset="utf-8">
-  <title>Virus Simulator</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>보안 박물관 - 체험 섹션</title>
+        <link rel="stylesheet" href="v3_main.css">
+    </head>
 
-  <link rel="stylesheet" href="index.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
-</head>
+    <body>
+        <div class="background-container">
 
-<body>
-  <div class="site_title">
-    <h1 class="title_">Virus/Vaccine Program Simulator</h1>
-  </div>
-  <div class="container">
-    <div class="virus" onclick="location.href='virus/VirusList.html';">
-      <div class="section">
-      <h1 class="con_1">Virus</h1>
-      <div class='con_2'>1988년 ~ 1995년까지의 컴퓨터 바이러스를 만나보세요.</div>
-      </div>
-    </div>
-    <div class="vaccine" onclick="location.href='./vaccine/VaccineList.html';">
-      <div class="section">
-      <h1 class="con_1">VACCINE</h1>
-      <div class='con_2'>V1 ~ V3에 이르기까지 개발되었던 백신 프로그램을 만나보세요.</div>
-      </div>
-    </div>
-  </div>
-</body>
+            <div class="prev-section">
+                <div class="text-container">
+                    <span class="text-output"></span><span class="cursor"></span>
+                    <button class="next-button">▼</button>
+                </div>
+            </div>
+
+            <div class="container">
+                <img src="img/보안박물관_.png" alt="제목 이미지" class="main hidden">
+                <img src="img/브이쓰리.png" alt="부제목 이미지" class="sub hidden">
+                <button type="button" class="start-button hidden">버튼을 누르세요.</button>
+                <div class="background-stars hidden">
+                    <img src="img/별1.png" alt="별 이미지 1" class="star-image">
+                    <img src="img/별2.png" alt="별 이미지 2" class="star-image">
+                    <img src="img/별3.png" alt="별 이미지 3" class="star-image">
+                    <img src="img/별4.png" alt="별 이미지 4" class="star-image">
+                    <img src="img/별5.png" alt="별 이미지 5" class="star-image">
+                    <img src="img/별6.png" alt="별 이미지 6" class="star-image">
+                    <img src="img/별7.png" alt="별 이미지 7" class="star-image">
+                    <img src="img/별8.png" alt="별 이미지 8" class="star-image">
+                </div>
+            </div>
+        </div>
+        <script src="v3_main.js"></script>
+    </body>
 
 </html>

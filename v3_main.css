@@ -1,0 +1,378 @@
+html,
+body {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'NeoDunggeunmoPro-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.background-container {
+    margin-top: 0px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*************************/
+/*       CRT 효과        */
+/*************************/
+.background-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 50%, transparent 50%);
+    background-size: 100% 4px;
+    background-repeat: repeat;
+    animation: scanline 20s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes scanline {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 0% 5%;
+    }
+}
+
+
+/*****************************/
+/*       Prev Section        */
+/*****************************/
+
+.prev-section {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+.typewriter-container {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.typewriter-text {
+    display: inline-block;
+}
+
+.text-output,
+.cursor {
+    font-family: 'NeoDunggeunmoPro-Regular';
+    line-height: 1.5;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.text-output {
+    position: relative;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: justify;
+}
+
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    overflow: center;
+}
+
+
+.next-button {
+    background-color: #cefad000;
+    display: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    padding: 0px;
+    cursor: pointer;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0.7;
+    }
+}
+
+
+.next-button:hover {
+    color: #ffffffbb;
+}
+
+/*****************************/
+/*          Intro            */
+/*****************************/
+
+.hidden {
+    display: none;
+}
+
+.container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* container animation */
+
+.fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+  }
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 20%, 0);
+      }
+      to {
+        opacity: 1;
+        transform: translateZ(0);
+      }
+}
+
+/* container sub */
+.main {
+    margin-bottom: 10px;
+    width: 50%;
+    max-width: 1200px;
+}
+
+.sub {
+    margin-bottom: 10px;
+    width: 55%;
+    max-width: 1300px;
+}
+
+/* Start Button */
+.start-button {
+    font-family: 'NeoDunggeunmoPro-Regular';
+    background-color: #021c447e;
+    border: none;
+    color: white;
+    padding: 15px 60px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 50px;
+    margin-top: 5%;
+    cursor: pointer;
+}
+
+.start-button:hover {
+    animation-name: wobble-vertical;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes wobble-vertical {
+    16.65% {
+      transform: translateY(8px);
+    }
+  
+    33.3% {
+      transform: translateY(-6px);
+    }
+  
+    49.95% {
+      transform: translateY(4px);
+    }
+  
+    66.6% {
+      transform: translateY(-2px);
+    }
+  
+    83.25% {
+      transform: translateY(1px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+}
+
+.star-image {
+    animation: rotateStar 5s linear infinite;
+}
+
+@keyframes rotateStar {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(50deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.background-stars img {
+    position: absolute;
+}
+
+.background-stars img:nth-child(1) {
+    top: 10%;
+    left: 5%;
+}
+
+.background-stars img:nth-child(2) {
+    top: 15%;
+    left: 40%;
+}
+
+.background-stars img:nth-child(3) {
+    top: 20%;
+    left: 80%;
+}
+
+.background-stars img:nth-child(4) {
+    top: 24%;
+    left: 60%;
+}
+
+.background-stars img:nth-child(5) {
+    top: 61%;
+    left: 10%;
+}
+
+.background-stars img:nth-child(6) {
+    top: 63%;
+    left: 30%;
+}
+
+.background-stars img:nth-child(7) {
+    top: 60%;
+    left: 75%;
+}
+
+.background-stars img:nth-child(8) {
+    top: 80%;
+    left: 50%;
+}
+
+
+/* 모바일 화면에서 적용할 스타일 */
+@media screen and (max-width: 768px) {
+
+    .main {
+        width: 80%;
+    }
+
+    .sub {
+        width: 86%;
+    }
+
+    @keyframes slideUpPadding {
+        0% {
+            padding-top: 40%;
+        }
+
+        100% {
+            padding-top: 0;
+        }
+    }
+
+    .background-container.slideUpPadding {
+        animation: slideUpPadding 1s forwards;
+    }
+
+    .background-container {
+        padding-top: 40%;
+    }
+
+    .star-image {
+        max-width: 30px;
+    }
+
+    .start-button {
+        font-size: 20px;
+        padding: 7px 30px;
+    }
+
+    .container-slide-out {
+        transform: translateY(-200%);
+        transition: transform 1s ease-in-out;
+    }
+
+    .container {
+        position: absolute;
+        height: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .next-section {
+        width: 100%;
+    }
+
+    .text-container {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        width: 90%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .text-output,
+    .cursor {
+        font-size: 17px;
+        text-align: justify;
+    }
+
+    .next-button {
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .text-output,
+    .cursor {
+        font-size: 35px;
+        text-align: justify;
+    }
+}
