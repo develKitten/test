@@ -4,7 +4,7 @@ Dos(document.getElementById("jsdos"), {
     cycles: 1000,
     autolock: false,
 }).ready(function (fs, main) {
-  fs.extract("https://raw.githack.com/develKitten/test/main/msdos/var_vac/virus/pingpong/pingpong.zip").then(function () {
+  fs.extract("https://raw.githack.com/develKitten/test/main/msdos/vir_vac/virus/pingpong/pingpong.zip").then(function () {
     main(["-c", "pingpong.bat"]).then(function (ci) {
         window.ci = ci;
     });
@@ -21,11 +21,11 @@ const dialogBox = document.createElement('div');
 let interval; // Declare interval variable here to be accessible globally
 
 const messages = [
-    { message: '어서오세요, 처음오신 것을 환영합니다. 여러분들은 40년 전에 사용한 운영체제를 직접 보고 계십니다.', type: 'text' },
-    { message: '\'검은 화면에, 그저 글자만 떠있는데 이게 어떻게 컴퓨터 환경일 수가 있지?\'라고 생각하실 수도 있겠습니다. 하지만 과거 환경은 실제로 이랬습니다. ', type: 'text' },
-    { message: '지금의 컴퓨터 환경은 그림 위주의 환경이어서 초보자들도 쉽게 사용할 수가 있습니다. 하지만, 옛날에는 그림을 여러 개 띄울 컴퓨터 환경이 되지 못했습니다.', type: 'text' },
-    { message: '따라서, 과거 사람들은 이런 환경에서 명령어를 입력하여 컴퓨터를 사용했습니다. 즉, 옛날 운영체제를 완전히 이해하려면 여기서 쓰이던 명령어를 알아야 합니다.', type: 'text'},
-    { message: '... 아, 어려울 것 같다고요? 걱정 마세요, 여기서는 가장 기초적인 명령어 4개만 배우겠습니다. 금방 끝나니 걱정마세요 ^-^!', type:'text'}
+    { message: '환영합니다, 시간여행자여. 지금 보시는 것은 40년 전의 컴퓨터 환경입니다.', type: 'text' },
+    { message: '\'검은 화면에 흰 글자... 이게 컴퓨터 환경이라고?\' 그런 생각이 드실 수 있습니다. 그러나, 이것이 과거의 현실입니다.', type: 'text' },
+    { message: '현대의 컴퓨터는 그림 위주로, 누구나 쉽게 다룰 수 있지만, 과거의 컴퓨터는 , 그림을 여러 개 띄울 컴퓨터 환경이 되지 못했습니다', type: 'text' },
+    { message: '따라서 사람들은 옛날 환경에서 명령어를 입력해 컴퓨터를 조작했습니다. 즉, 당시 환경을 완전히 이해하려면, 이 명령어들을 배워야 합니다.', type: 'text'},
+    { message: '아, 어려워 보인다고요? 걱정 마세요. 여기서는 기본 명령어 4개만 소개하니, 금세 배울 수 있을 겁니다. 시작해볼까요?', type:'text'}
 ];
 
 function renderDialogBox() {
