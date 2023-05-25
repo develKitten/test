@@ -71,6 +71,7 @@ canvas {
 /* dialog box */
 
 #dialogBox {
+    display: none;
     z-index: 3;
     image-rendering: pixelated;
     text-transform: uppercase;

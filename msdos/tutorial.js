@@ -4,8 +4,8 @@ Dos(document.getElementById("jsdos"), {
     cycles: 1000,
     autolock: false,
 }).ready(function (fs, main) {
-  fs.extract("https://raw.githack.com/develKitten/test/main/msdos/vir_vac/virus/pingpong/pingpong.zip").then(function () {
-    main(["-c", "pingpong.bat"]).then(function (ci) {
+  fs.extract("https://raw.githack.com/develKitten/test/main/msdos/msdos.zip").then(function () {
+    main(["-c", "msdos.bat"]).then(function (ci) {
         window.ci = ci;
     });
   });
@@ -21,14 +21,15 @@ const dialogBox = document.createElement('div');
 let interval; // Declare interval variable here to be accessible globally
 
 const messages = [
-    { message: '환영합니다, 시간여행자여. 지금 보시는 것은 40년 전의 컴퓨터 환경입니다.', type: 'text' },
-    { message: '\'검은 화면에 흰 글자... 이게 컴퓨터 환경이라고?\' 그런 생각이 드실 수 있습니다. 그러나, 이것이 과거의 현실입니다.', type: 'text' },
-    { message: '현대의 컴퓨터는 그림 위주로, 누구나 쉽게 다룰 수 있지만, 과거의 컴퓨터는 , 그림을 여러 개 띄울 컴퓨터 환경이 되지 못했습니다', type: 'text' },
-    { message: '따라서 사람들은 옛날 환경에서 명령어를 입력해 컴퓨터를 조작했습니다. 즉, 당시 환경을 완전히 이해하려면, 이 명령어들을 배워야 합니다.', type: 'text'},
-    { message: '아, 어려워 보인다고요? 걱정 마세요. 여기서는 기본 명령어 4개만 소개하니, 금세 배울 수 있을 겁니다. 시작해볼까요?', type:'text'}
+    { message: '환영합니다, 시간여행자여. 지금 보이시는 것은 40년 전의 컴퓨터 환경인 MS-DOS입니다.', type: 'text' },
+    { message: '\'검은 화면에 흰 글자밖에 없는데 이게 컴퓨터 환경이라고?\' 그런 생각이 드실 수 있습니다. 그러나, 이것이 과거 컴퓨터 환경의 현실입니다.', type: 'text' },
+    { message: '현대의 컴퓨터는 그림 위주로, 누구나 쉽게 다룰 수 있지만, 과거의 컴퓨터는 그림을 여러 개 띄울 컴퓨터 환경이 되지 못했습니다', type: 'text' },
+    { message: '따라서 사람들은 텍스트밖에 없는 환경에서 명령어를 입력해 컴퓨터를 조작했습니다. 즉, 당시 환경을 완전히 이해하려면, 이 명령어들을 배워야 합니다.', type: 'text'},
+    { message: '...아, 어려워 보인다고요? 걱정 마세요. 여기서는 기본 명령어 4개만 소개하니, 금세 배울 수 있을 겁니다.^-^ 시작해볼까요?', type:'text'}
 ];
 
 function renderDialogBox() {
+    dialogBox.style.display = "block";
     dialogBox.innerHTML = `
         <div id="dialogTitle">
             ${characterName}
@@ -42,6 +43,7 @@ function renderDialogBox() {
     dialogBox.classList.add('zoomIn');
     type(messages[currentMessage].message);
 }
+
 function type(sentence) {
     let i = 0;
     const textOutput = document.querySelector(".textOutput");
@@ -83,7 +85,8 @@ function handleClick() {
 window.onload = () => {
     dialogBox.id = 'dialogBox';
     document.body.appendChild(dialogBox);
-    renderDialogBox();
+
+    setTimeout(renderDialogBox, 1000); // 1000ms = 1s
 };
 
 document.addEventListener('keydown', (event) => {
