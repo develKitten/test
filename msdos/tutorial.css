@@ -5,7 +5,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
 /* PC, Mobile */
 * {
     margin: 0;
@@ -53,7 +52,6 @@ canvas {
     right: 10px;
     z-index: 2;
     display: inline-block;
-
     font-family: 'Courier New', Courier, monospace;
     background-color: white;
     padding: 12px 24px;
@@ -80,7 +78,7 @@ canvas {
     border-image: url("img/dialog-borderbox.png") 8 / 12px 12px 12px 12px stretch;
     padding: 30px;
     position: fixed;
-    bottom: 0px;
+    bottom:0;
     width: 90%;
     min-height: 300px;
     margin-left: auto;
@@ -110,37 +108,34 @@ canvas {
     bottom: 12px;
 }
 
-@keyframes zoomIn {
+.onani {
+    animation-name: onani;
+    animation-duration: 0.2s;
+}
+
+@keyframes onani {
     from {
       opacity: 0;
-      transform: scale3d(0.3, 0.3, 0.3);
     }
   
     to {
       opacity: 1;
-      transform: none;
     }
 }
 
-.zoomIn {
-    animation-name: zoomIn;
-    animation-duration: 0.7s;
+.offani {
+    animation-name: offani;
+    animation-duration: 0.2s;
 }
 
-@keyframes zoomOut {
+@keyframes offani {
     from {
       opacity: 1;
     }
   
     to {
       opacity: 0;
-      transform: scale3d(0.1, 0.1, 0.1);
     }
-}
-
-.zoomOut {
-    animation-name: zoomOut;
-    animation-duration: 0.7s;
 }
 
 /* Phone */
@@ -151,11 +146,20 @@ canvas {
     }
 
     #dialogBox {
-        min-height: 270px;
-        font-size: 20px;
+        min-height: 150px;
+        margin-top: 70px;
+        font-size: 15px;
+        bottom: initial;
+        top: 0;
+    }
+
+    #dialogFooter {
+        top: initial;
+        bottom: 12px;
+        font-size: 15px;
     }
 
     #dialogTitle {
-        font-size: 20px; 
+        font-size: 15px; 
     }
 }
