@@ -15,30 +15,24 @@ document.addEventListener("DOMContentLoaded", function() {
     
                 keys.forEach((key) => {
                     key.addEventListener('click', (event) => {
-                        console.log(`Button ${event.target.value} clicked.`);
                         let value = event.target.value;
-                        console.log(value);
     
                         if (value === "Enter") {
-                            console.log("enter");
                             ci.simulateKeyEvent(13, true); 
                             ci.simulateKeyEvent(13, false); 
                         } else if (value === "Backspace") {
-                            console.log("backspace");
                             ci.simulateKeyEvent(8, true); 
                             ci.simulateKeyEvent(8, false);
                         } else if (value === "space") {
                             ci.simulateKeyEvent(32, true);  // keydown for space
                             ci.simulateKeyEvent(32, false); // keyup for space
                         } else if (value === "dot") {
-                            console.log("fucjk")
                             ci.simulateKeyEvent(190, true);
                             ci.simulateKeyEvent(190, false);
                         } else if (value === "bar") {
                             ci.simulateKeyEvent(47, true);  // keydown for /
                             ci.simulateKeyEvent(47, false); // keyup for /
                         } else {
-                            console.log("key");
                             const upperCaseValue = value.toUpperCase();
                             const keyCode = upperCaseValue.charCodeAt(0);
                             ci.simulateKeyEvent(keyCode, true);  
@@ -196,13 +190,9 @@ class InteractiveDialogBox extends DialogBox {
                 // If 'Backspace', remove the last character of inputString
                 this.inputString = this.inputString.slice(0, -1);
             }
-            console.log(this.inputString);
         } else {
             // Compare inputString with expectedRegex
             this.result = this.expectedRegex.test(this.inputString) ? 'ok' : 'no';
-            console.log('Input:', this.inputString);
-            console.log('Regex:', this.expectedRegex);
-            console.log('Result:', this.result);
     
             this.inputString = '';
     
@@ -296,7 +286,6 @@ class InteractiveDialogBox extends DialogBox {
 
 async function handleDialogEnded(initialDialog, nextDialog, reentryMessages, reentryRegex) {
     let result = await initialDialog.start();
-    console.log(result)
 
     let d;
 
