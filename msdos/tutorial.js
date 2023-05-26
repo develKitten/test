@@ -1,17 +1,67 @@
 /* MS-DOS Emulator */
-Dos(document.getElementById("jsdos"), {
-    wdosboxUrl: "https://js-dos.com/6.22/current/wdosbox.js",
-    cycles: 1000,
-    autolock: false,
-}).ready(function (fs, main) {
-    fs.extract("https://raw.githack.com/develKitten/test/main/msdos/msdos.zip").then(function () {
-        main(["-c", "msdos.bat"]).then(function (ci) {
-            window.ci = ci;
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    let keys = document.querySelectorAll('.key');
+
+    Dos(document.getElementById("jsdos"), {
+        wdosboxUrl: "https://js-dos.com/6.22/current/wdosbox.js",
+        cycles: 1000,
+        autolock: false,
+    }).ready(function(fs, main) {
+        fs.extract("https://raw.githack.com/develKitten/test/main/msdos/msdos.zip").then(function () {
+            main(["-c", "msdos.bat"]).then(function (ci) {
+                window.ci = ci;
+    
+                keys.forEach((key) => {
+                    key.addEventListener('click', (event) => {
+                        console.log(`Button ${event.target.value} clicked.`);
+                        let value = event.target.value;
+                        console.log(value);
+    
+                        if (value === "Enter") {
+                            console.log("enter");
+                            ci.simulateKeyEvent(13, true); 
+                            ci.simulateKeyEvent(13, false); 
+                        } else if (value === "Backspace") {
+                            console.log("backspace");
+                            ci.simulateKeyEvent(8, true); 
+                            ci.simulateKeyEvent(8, false);
+                        }  else if (value === "space") {
+                            ci.simulateKeyEvent(32, true);  // keydown for space
+                            ci.simulateKeyEvent(32, false); // keyup for space
+                        } else if (value === "dot") {
+                            ci.simulateKeyEvent(46, true);  // keydown for .
+                            ci.simulateKeyEvent(46, false); // keyup for .
+                        } else if (value === "bar") {
+                            ci.simulateKeyEvent(47, true);  // keydown for /
+                            ci.simulateKeyEvent(47, false); // keyup for /
+                        } else {
+                            console.log("key");
+                            const upperCaseValue = value.toUpperCase();
+                            const keyCode = upperCaseValue.charCodeAt(0);
+                            ci.simulateKeyEvent(keyCode, true);  
+                            ci.simulateKeyEvent(keyCode, false); 
+                        }
+                    });
+                });
+            });
         });
     });
+    document.querySelector('#jsdos').focus();
 });
 
-document.querySelector('#jsdos').focus();
+
+
+
+
+/* virtual keyboards */
+
+let virtualKeyboard = document.getElementById('virtual-keyboard');
+
+if (/Mobi|Android/i.test(navigator.userAgent)) {
+    virtualKeyboard.style.display = 'block';
+}
 
 /* Classes */
 class DialogBox {
@@ -121,22 +171,36 @@ class InteractiveDialogBox extends DialogBox {
     }
 
     checkInput(event) {
-        if (event.key !== 'Enter') {
-            if (event.key.length === 1) {  // Exclude control keys such as 'Backspace'
-                this.inputString += event.key;
+        let inputKey = '';
+
+        if (event.type === 'keydown') {
+            inputKey = event.key;
+        } else if (event.type === 'click') {
+            inputKey = event.target.value;
+            if (inputKey === "Enter") {
+                inputKey = 'Enter';
+            } else if (inputKey === "Backspace") {
+                inputKey = '\b';
+            } else if (inputKey === "space") {
+                inputKey = ' ';
+            }
+        }
+        
+        if (inputKey !== 'Enter') {
+            if (inputKey.length === 1) {  // Exclude control keys such as 'Backspace'
+                this.inputString += inputKey;
+                console.log(this.inputString);
             }
         } else {
-            // Compare inputString with expectedRegex
             this.result = this.expectedRegex.test(this.inputString) ? 'ok' : 'no';
             console.log('Input:', this.inputString);
             console.log('Regex:', this.expectedRegex);
             console.log('Result:', this.result);
-
+        
             this.inputString = '';
-
-            // Trigger an event to notify that a check has been made
+        
             this.dialogBox.dispatchEvent(new Event('inputChecked'));
-
+        
             // After check, close the dialog
             this.dialogBox.classList.remove('onani');
             this.dialogBox.classList.add('offani');
@@ -147,6 +211,7 @@ class InteractiveDialogBox extends DialogBox {
             }, { once: true });
         }
     }
+    
 
 
     handleClick() {
@@ -167,17 +232,30 @@ class InteractiveDialogBox extends DialogBox {
 
     bindEvents() {
         if (!this.boundCheckInput) {
-            this.boundCheckInput = this.checkInput.bind(this);
+            this.boundCheckInput = event => this.checkInput(event);
+    
+            // Listen to virtual keyboard events
+            const keys = document.querySelectorAll('.key');
+            keys.forEach((key) => {
+                key.addEventListener('click', this.boundCheckInput);
+            });
+    
             document.addEventListener('keydown', this.boundCheckInput);
         }
     }
-
+    
     removeEvents() {
         if (this.boundCheckInput) {
+            const keys = document.querySelectorAll('.key');
+            keys.forEach((key) => {
+                key.removeEventListener('click', this.boundCheckInput);
+            });
+    
             document.removeEventListener('keydown', this.boundCheckInput);
             this.boundCheckInput = null;
         }
     }
+    
 
     start() {
         this.dialogBox.style.minHeight = '200px';
@@ -234,7 +312,7 @@ async function handleDialogEnded(initialDialog, nextDialog, reentryMessages, ree
 
 
 const dialog = new DialogBox([
-    { message: '환영합니다, 시간여행자여. 지금부터 튜토리얼을 시작합니다. 현재 보이시는 것은 40년 전의 컴퓨터 환경인 MS-DOS입니다.', type: 'text' },
+    { message: '환영합니다, 지금부터 튜토리얼을 시작합니다. 현재 보이시는 것은 40년 전의 컴퓨터 환경인 MS-DOS입니다.', type: 'text' },
     { message: '\'검은 화면에 흰 글자밖에 없는데 이게 컴퓨터 환경이라고?\' 그런 생각이 드실 수 있습니다. 그러나, 이것이 과거 컴퓨터 환경의 현실입니다.', type: 'text' },
     { message: '현대의 컴퓨터는 그림 위주로, 누구나 쉽게 다룰 수 있지만, 과거의 컴퓨터는 그림을 여러 개 띄울 컴퓨터 환경이 되지 못했습니다.', type: 'text' },
     { message: '따라서 사람들은 텍스트밖에 없는 환경에서 명령어를 입력해 컴퓨터를 조작했습니다. 즉, 당시 환경을 완전히 이해하려면, 이 명령어들을 배워야 합니다.', type: 'text' },
