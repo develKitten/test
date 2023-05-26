@@ -214,16 +214,16 @@ canvas {
 }
 
 /* Phone */
-@media only screen and (max-device-width: 740px) and (min-device-width: 281px){
+@media only screen and (max-device-width: 740px) and (min-device-width: 280px){
     #jsdos {
         transform: none;
         transform-origin: top left;
     }
 
     #dialogBox {
-        min-height: 150px;
+        min-height: 100px;
         margin-top: 70px;
-        font-size: 15px;
+        font-size: 13px;
         bottom: initial;
         top: 0;
     }
@@ -237,6 +237,32 @@ canvas {
     #dialogTitle {
         font-size: 15px; 
     }
+}
+
+@media only screen and (max-device-width: 540px) and (max-device-height: 720px){
+    #jsdos {
+        transform: none;
+        transform-origin: top left;
+    }
+
+    #dialogBox {
+        min-height: 100px;
+        margin-top: 60px;
+        font-size: 13px;
+        bottom: initial;
+        top: 0;
+    }
+
+    #dialogFooter {
+        top: initial;
+        bottom: 12px;
+        font-size: 15px;
+    }
+
+    #dialogTitle {
+        font-size: 15px; 
+    }
+
 }
 
 /* ipad, etc. */
