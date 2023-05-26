@@ -27,12 +27,13 @@ document.addEventListener("DOMContentLoaded", function() {
                             console.log("backspace");
                             ci.simulateKeyEvent(8, true); 
                             ci.simulateKeyEvent(8, false);
-                        }  else if (value === "space") {
+                        } else if (value === "space") {
                             ci.simulateKeyEvent(32, true);  // keydown for space
                             ci.simulateKeyEvent(32, false); // keyup for space
                         } else if (value === "dot") {
-                            ci.simulateKeyEvent(46, true);  // keydown for .
-                            ci.simulateKeyEvent(46, false); // keyup for .
+                            console.log("fucjk")
+                            ci.simulateKeyEvent(190, true);
+                            ci.simulateKeyEvent(190, false);
                         } else if (value === "bar") {
                             ci.simulateKeyEvent(47, true);  // keydown for /
                             ci.simulateKeyEvent(47, false); // keyup for /
@@ -183,6 +184,8 @@ class InteractiveDialogBox extends DialogBox {
                 inputKey = 'Backspace';
             } else if (inputKey === "space") {
                 inputKey = ' ';
+            } else if (inputKey === "dot") {
+                inputKey = '.';
             }
         }
     
