@@ -172,7 +172,7 @@ class InteractiveDialogBox extends DialogBox {
 
     checkInput(event) {
         let inputKey = '';
-
+    
         if (event.type === 'keydown') {
             inputKey = event.key;
         } else if (event.type === 'click') {
@@ -180,27 +180,32 @@ class InteractiveDialogBox extends DialogBox {
             if (inputKey === "Enter") {
                 inputKey = 'Enter';
             } else if (inputKey === "Backspace") {
-                inputKey = '\b';
+                inputKey = 'Backspace';
             } else if (inputKey === "space") {
                 inputKey = ' ';
             }
         }
-        
+    
         if (inputKey !== 'Enter') {
-            if (inputKey.length === 1) {  // Exclude control keys such as 'Backspace'
+            if (inputKey.length === 1 && inputKey !== 'Backspace') {  // Exclude control keys such as 'Backspace'
                 this.inputString += inputKey;
-                console.log(this.inputString);
+            } else if (inputKey === 'Backspace') {
+                // If 'Backspace', remove the last character of inputString
+                this.inputString = this.inputString.slice(0, -1);
             }
+            console.log(this.inputString);
         } else {
+            // Compare inputString with expectedRegex
             this.result = this.expectedRegex.test(this.inputString) ? 'ok' : 'no';
             console.log('Input:', this.inputString);
             console.log('Regex:', this.expectedRegex);
             console.log('Result:', this.result);
-        
+    
             this.inputString = '';
-        
+    
+            // Trigger an event to notify that a check has been made
             this.dialogBox.dispatchEvent(new Event('inputChecked'));
-        
+    
             // After check, close the dialog
             this.dialogBox.classList.remove('onani');
             this.dialogBox.classList.add('offani');
@@ -211,6 +216,7 @@ class InteractiveDialogBox extends DialogBox {
             }, { once: true });
         }
     }
+    
     
 
 
