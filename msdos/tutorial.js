@@ -287,6 +287,7 @@ class InteractiveDialogBox extends DialogBox {
 async function handleDialogEnded(initialDialog, nextDialog, reentryMessages, reentryRegex) {
     let result = await initialDialog.start();
 
+
     let d;
 
     do {
@@ -490,5 +491,5 @@ dialogBox_8.dialogBox.addEventListener('dialogEnded', () => handleDialogEnded(
 ));
 
 dialogBox_9.dialogBox.addEventListener('dialogEnded', () =>{
-    window.location.href = 'vir_vac/index.html';
+    window.location.href = 'vir_vac/MainList.html';
 });

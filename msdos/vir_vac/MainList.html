@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="MainList.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="nav-mobile">
+            <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+            </div>
+        </div>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="nav-mobile"></div>
+    </header>
+
+
+    <nav class="nav-main">
+        <div class="nav-close-btn">X</div> <!-- Add this line -->
+        <ul class="nav-main__list">
+            <li class="nav-main__item"><a href="#">컴퓨터 바이러스 목록</a></li>
+            <li class="nav-main__item"><a href="#">컴퓨터 백신 목록</a></li>
+            <li class="nav-main__item"><a href="#">Settings</a></li>
+        </ul>
+    </nav>
+
+    <div class="v2_List">
+        <div class="virus">
+            <div class="title">#컴퓨터_바이러스</div>
+            <button class="b">▼</button>
+        </div>
+        <div class="description">1988년부터 1995년까지 시각적 효과를 화려하게 내던 바이러스들을 모았습니다.</div>
+        <ul id="itemList">
+            <!-- Items will be populated by JavaScript -->
+        </ul>
+    </div>
+    <script src="MainList.js"></script>
+</body>
+
+</html>
