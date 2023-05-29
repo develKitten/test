@@ -1,0 +1,78 @@
+/* PC, Mobile */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-color: black;
+}
+
+.dosbox-container {
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+    overflow: hidden;
+}
+
+#jsdos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.back {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    display: inline-block;
+
+    font-family: 'Courier New', Courier, monospace;
+    background-color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+/* Phone */
+@media only screen and (max-device-width: 740px) and (orientation: landscape) {
+    #jsdos {
+        transform: none;
+        transform-origin: top left;
+    }
+
+    .back {
+        font-size: 10px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
+}

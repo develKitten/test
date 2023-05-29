@@ -3,8 +3,8 @@ Dos(document.getElementById("jsdos"), {
     cycles: 1000,
     autolock: false,
 }).ready(function (fs, main) {
-  fs.extract("https://raw.githack.com/develKitten/test/main/msdos/vir_vac/virus/green/GREEN.zip").then(function () {
-    main(["-c", "green.bat"]).then(function (ci) {
+  fs.extract("https://raw.githack.com/develKitten/test/main/msdos/vir_vac/virus/yankee/yankee.zip").then(function () {
+    main(["-c", "yankee.bat"]).then(function (ci) {
         window.ci = ci;
     });
   });
