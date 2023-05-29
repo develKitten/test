@@ -58,7 +58,7 @@ navCloseBtn.addEventListener('click', () => {
 
 // page
 let currentPage = 1;
-const itemsPerPage = 6;
+const itemsPerPage = 7;
 const itemList = document.getElementById("itemList");
 const paginationButtons = document.querySelectorAll(".pagination button");
 
