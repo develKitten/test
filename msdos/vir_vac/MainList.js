@@ -14,8 +14,8 @@ const items = [
     },
     {
         title: "LSD 바이러스",
-        imgSrc: "./vir_img/crash.png",
-        link: "virus/crash/crash.html",
+        imgSrc: "./vir_img/lsd.png",
+        link: "virus/LSD/LSD.html",
         tags: ["#외국"]
     },
     {
@@ -32,13 +32,13 @@ const items = [
     },
     {
         title: "양키두들 바이러스",
-        imgSrc: "",
+        imgSrc: "./vir_img/yankee.jpg",
         link: "virus/yankee/yankee.html",
-        tags: ["#외국", "#파일_바이러스"] 
+        tags: ["#외국", "#소리주의"] 
     },
     {
         title: "월드컵 바이러스",
-        imgSrc: "",
+        imgSrc: "./vir_img/2002.png",
         link: "virus/worldcup/worldcup.html",
         tags: ["#한국"] 
     }
@@ -81,6 +81,10 @@ function renderItems() {
             </div>
         `;
         itemList.appendChild(li);
+
+        li.addEventListener('click', () => {
+            window.location.href = item.link;
+        });
     }
 
     // Add this code to apply random gradient to tags
