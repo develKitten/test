@@ -29,6 +29,18 @@ const items = [
         imgSrc: "./vir_img/green.png",
         link: "virus/green/green.html",
         tags: ["#외국", "#파일_바이러스"] 
+    },
+    {
+        title: "양키두들 바이러스",
+        imgSrc: "",
+        link: "virus/yankee/yankee.html",
+        tags: ["#외국", "#파일_바이러스"] 
+    },
+    {
+        title: "월드컵 바이러스",
+        imgSrc: "",
+        link: "virus/worldcup/worldcup.html",
+        tags: ["#한국"] 
     }
 ];
 
