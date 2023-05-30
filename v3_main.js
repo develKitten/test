@@ -160,7 +160,7 @@ function fadeOutAndNavigate() {
       element.style.opacity = opacity;
       background.style.opacity = opacity;
     });
-    if (opacity <= 0) { // 투명도가 0이 되면 interval을 멈춥니다.
+    if (opacity <= 0) {
       clearInterval(interval); 
       setTimeout(() => {
 

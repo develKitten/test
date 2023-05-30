@@ -1,6 +1,5 @@
 /* MS-DOS Emulator */
 
-
 document.addEventListener("DOMContentLoaded", function() {
     let keys = document.querySelectorAll('.key');
 
@@ -24,14 +23,14 @@ document.addEventListener("DOMContentLoaded", function() {
                             ci.simulateKeyEvent(8, true); 
                             ci.simulateKeyEvent(8, false);
                         } else if (value === "space") {
-                            ci.simulateKeyEvent(32, true);  // keydown for space
-                            ci.simulateKeyEvent(32, false); // keyup for space
+                            ci.simulateKeyEvent(32, true); 
+                            ci.simulateKeyEvent(32, false);
                         } else if (value === "dot") {
                             ci.simulateKeyEvent(190, true);
                             ci.simulateKeyEvent(190, false);
                         } else if (value === "bar") {
-                            ci.simulateKeyEvent(47, true);  // keydown for /
-                            ci.simulateKeyEvent(47, false); // keyup for /
+                            ci.simulateKeyEvent(47, true); 
+                            ci.simulateKeyEvent(47, false); 
                         } else {
                             const upperCaseValue = value.toUpperCase();
                             const keyCode = upperCaseValue.charCodeAt(0);
@@ -45,9 +44,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     document.querySelector('#jsdos').focus();
 });
-
-
-
 
 
 /* virtual keyboards */
