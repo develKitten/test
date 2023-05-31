@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
     document.querySelector('#jsdos').focus();
+    
 });
 
 
