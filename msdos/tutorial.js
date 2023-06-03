@@ -254,16 +254,6 @@ class InteractiveDialogBox extends DialogBox {
     
 
     start() {
-        this.dialogBox.style.minHeight = '200px';
-
-        if (window.innerWidth <= 768) {
-            this.dialogBox.style.minHeight = '150px';
-        }
-
-        if (window.innerWidth <= 540 && window.innerHeight <= 720) {
-            this.dialogBox.style.minHeight = '100px';
-        }
-
         this.removeEvents();
 
         setTimeout(this.render.bind(this), 1000);
