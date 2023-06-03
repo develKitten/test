@@ -1,5 +1,5 @@
 // scroll
-document.querySelector("nav").classList.add("fixed-top"); // 페이지 로딩 시 클래스 추가
+document.querySelector("nav").classList.add("fixed-top");
 
 window.onscroll = function() {scrollFunction()};
 
@@ -11,7 +11,6 @@ function scrollFunction() {
   }
 }
 
-// Call scrollFunction on page load as well
 window.addEventListener("load", scrollFunction);
 
 // Virus List
@@ -74,7 +73,7 @@ function renderItems() {
         card.appendChild(cardBody);
 
         const column = document.createElement('div');
-        column.className = 'col-md-6 col-lg-4';  // md 사이즈에선 2개, lg 사이즈에선 3개가 보이도록 변경합니다.
+        column.className = 'col-md-6 col-lg-4'; 
         column.appendChild(card);
 
         itemList.appendChild(column);
