@@ -15,8 +15,6 @@ function scrollFunction() {
 window.addEventListener("load", scrollFunction);
 
 
-
-
 // Virus List
 const items = [
     {

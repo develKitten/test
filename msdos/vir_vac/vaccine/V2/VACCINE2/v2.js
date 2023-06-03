@@ -3,7 +3,7 @@ Dos(document.getElementById("jsdos"), {
     cycles: 1000,
     autolock: false,
 }).ready(function (fs, main) {
-  fs.extract("https://raw.githack.com/develKitten/test/main/vaccine/V2/VACCINE2/VACCINE2.zip").then(function () {
+  fs.extract("https://raw.githack.com/develKitten/test/main/msdos/vir_vac/vaccine/V2/VACCINE2/VACCINE2.zip").then(function () {
     main(["-c", "v2_test.bat"]).then(function (ci) {
         window.ci = ci;
     });

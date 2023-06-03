@@ -148,6 +148,7 @@
     .slider {
         display:none;
     }
+    
 }
 
 /* end page */
@@ -157,11 +158,13 @@
     padding: 25px 20px 20px 20px;
     font-family: 'OTWelcomeRA';
     background-color: #f1f1f1;
+    color:#a3a3a3;
   }
 
   .site-ori {
-    font-size: 26px;
+    font-size: 24px;
   }
+
 
   .contact-section h2 {
     font-size: 24px;

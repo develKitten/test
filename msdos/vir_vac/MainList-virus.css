@@ -1,0 +1,186 @@
+@font-face {
+    font-family: 'OTWelcomeRA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ONE-Mobile-Title';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Title.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Header */
+
+#logo {
+    height: 80px; 
+}
+.navbar {
+    min-height: 100px; 
+}
+
+/* explain */
+.explain {
+    font-family: 'ONE-Mobile-Title';
+    line-height: 1.7;
+    margin: 20px 0px 20px 0px;
+}
+
+.title {
+    font-size: 35px;
+}
+
+.explain-text {
+    font-family: 'OTWelcomeRA';
+    font-size: 20px;
+    color: #a5a5a5;
+}
+
+/* hamburger */
+
+.btn {
+    border: solid 1px rgb(74, 181, 196);
+    color:rgb(74, 181, 196);
+}
+
+.btn:hover,
+.btn:active  {
+    background-color: rgb(74, 181, 196);
+    color: #fff;
+    transition: .3s;
+}
+
+
+
+/* Item */
+.item {
+    font-family: 'OTWelcomeRA';
+    position: relative;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.item:hover {
+    box-shadow: 0px 20px 30px 0px rgba(0,0,0,0.2);
+}
+
+.cardImg {
+    width: 100%;
+    height: 180px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cardLow {
+    padding: 20px 15px 10px 15px;
+}
+
+
+.tag {
+    display: inline-block;
+    padding: 6px 10px 0px 10px;
+    margin : 0px 3px 10px 3px;
+    font-size: 13px;
+    border-radius: 10px; 
+    background:rgb(74, 181, 196);
+    color: white; 
+}
+
+@media only screen and (min-device-width: 281px) and (max-device-width: 780px){
+    #logo {
+        height: 70px; 
+    }
+
+    .slider {
+        display:none;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+
+    .explain {
+        font-family: 'ONE-Mobile-Title';
+        margin: 20px 0px 20px 0px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .explain-text {
+        font-family: 'OTWelcomeRA';
+        font-size: 14px;
+        color: #a5a5a5;
+    }
+}
+
+@media only screen and (max-device-width: 280px){
+    #logo {
+        height: 60px; 
+    }
+
+    .navbar {
+        min-height: 80px; 
+    }
+
+    .btn {
+        font-size: 11px;
+    }
+
+    .title {
+        font-size: 15px;
+    }
+    
+    .explain-text {
+        font-size: 12px;
+    }
+
+    .slider {
+        display:none;
+    }
+    
+}
+
+/* end page */
+.end-page {
+    margin-top: 30px;
+    line-height: 1.2;
+    padding: 25px 20px 20px 20px;
+    font-family: 'OTWelcomeRA';
+    background-color: #f1f1f1;
+    color:#a3a3a3;
+  }
+
+  .site-ori {
+    font-size: 24px;
+  }
+
+
+  .contact-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .contact-list li {
+    margin-bottom: 10px;
+  }
+  
+  .contact-list li i {
+    margin-right: 5px;
+  }
+  

@@ -488,5 +488,5 @@ dialogBox_8.dialogBox.addEventListener('dialogEnded', () => handleDialogEnded(
 ));
 
 dialogBox_9.dialogBox.addEventListener('dialogEnded', () =>{
-    window.location.href = 'vir_vac/MainList.html';
+    window.location.href = 'vir_vac/MainList-virus.html';
 });
