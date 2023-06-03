@@ -14,7 +14,6 @@ function scrollFunction() {
 // Call scrollFunction on page load as well
 window.addEventListener("load", scrollFunction);
 
-
 // Virus List
 const items = [
     {
@@ -25,19 +24,19 @@ const items = [
     },
     {
         title: "VACCINE2",
-        imgSrc: "./vac_img/V2.png",
+        imgSrc: "./vac_img/v2.png",
         link: "vaccine/V2/VACCINE2/v2.html",
         tags: ["#1989년", "#LBC"]
     },
     {
         title: "V2 Plus 1.2",
-        imgSrc: "./vac_img/v2_plus_1_2.png",
+        imgSrc: "./vac_img/v2_plus_1_2.PNG",
         link: "vaccine/V2/V2PLUS1_2/v2plus.html",
         tags: ["#1990년", "#PINGPONG"]
     },
     {
         title: "V3 Test Version",
-        imgSrc: "./vac_img/v3.png",
+        imgSrc: "./vac_img/V3.png",
         link: "vaccine/V3/V3.html",
         tags: ["#1990년", "최초 V3 프로그램"]
     }
