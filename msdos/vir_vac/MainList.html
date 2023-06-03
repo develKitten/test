@@ -2,44 +2,56 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="MainList.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="MainList.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-    <header class="header">
-        <div class="nav-mobile">
-            <div class="menu-btn">
-                <div class="menu-btn__burger"></div>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between fixed-top">
+        <a class="navbar-brand">
+            <img src="./logo.png" alt="Logo" id="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+            <form class="form-inline">
+                <button class="btn btn-outline-success my-2 my-sm-0 mx-2 d-block d-sm-none" type="submit">컴퓨터 바이러스 목록</button>
+                <button class="btn btn-outline-success my-2 my-sm-0 mx-2 d-block d-sm-none" type="submit">컴퓨터 백신 목록</button>
+                <button class="btn btn-outline-success my-2 my-sm-0 mx-2 d-none" type="submit">Settings</button>
+            </form>
         </div>
-        <div class="logo-container">
-            <img src="logo.png" alt="Logo" class="logo">
-        </div>
-        <div class="nav-mobile"></div>
-    </header>
-
-
-    <nav class="nav-main">
-        <div class="nav-close-btn">X</div> <!-- Add this line -->
-        <ul class="nav-main__list">
-            <li class="nav-main__item"><a href="#">컴퓨터 바이러스 목록</a></li>
-            <li class="nav-main__item"><a href="#">컴퓨터 백신 목록</a></li>
-            <li class="nav-main__item"><a href="#">Settings</a></li>
-        </ul>
     </nav>
+    
 
-    <div class="v2_List">
-        <div class="virus">
-            <div class="title">#컴퓨터_바이러스</div>
-            <button class="b">▼</button>
+    <div class="container">
+        <img src="./site_img/test1.jpg" class="slider w-100" alt="안내 메세지">
+
+        <div class="explain">
+            <div class="title">😈Computer Virus</div>
+            <div class="explain-text">체험하고 싶은 컴퓨터 바이러스를 클릭해보세요.</div>
         </div>
-        <div class="description">1988년부터 1995년까지 시각적 효과를 화려하게 내던 바이러스들을 모았습니다.</div>
-        <ul id="itemList">
-            <!-- Items will be populated by JavaScript -->
-        </ul>
+        <div class="row" id="itemList"></div>
+
     </div>
+
+    <div class="end-page">
+        <ul class="contact-list">
+            <li class="site-ori">V3박물관 미니 갤러리</li>
+          <li><i class="fas fa-envelope"></i>sleepahn3303@gmail.com</li>
+          <li><i class="fas fa-map-marker-alt"></i></li>
+        </ul>
+      </div>
+      
+
     <script src="MainList.js"></script>
 </body>
 

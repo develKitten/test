@@ -1,3 +1,22 @@
+// scroll
+document.querySelector("nav").classList.add("fixed-top"); // 페이지 로딩 시 클래스 추가
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.querySelector("nav").classList.add("fixed-top");
+  } else {
+    document.querySelector("nav").classList.remove("fixed-top");
+  }
+}
+
+// Call scrollFunction on page load as well
+window.addEventListener("load", scrollFunction);
+
+
+
+
 // Virus List
 const items = [
     {
@@ -44,67 +63,49 @@ const items = [
     }
 ];
 
-const menuBtn = document.querySelector('.menu-btn');
-const navMain = document.querySelector('.nav-main');
-const navCloseBtn = document.querySelector('.nav-close-btn');
-
-menuBtn.addEventListener('click', () => {
-    navMain.classList.toggle('open');
-});
-
-navCloseBtn.addEventListener('click', () => {
-    navMain.classList.remove('open');
-});
-
-// page
-let currentPage = 1;
-const itemsPerPage = 7;
-const itemList = document.getElementById("itemList");
-const paginationButtons = document.querySelectorAll(".pagination button");
-
 function renderItems() {
-    itemList.innerHTML = "";
-    const start = (currentPage - 1) * itemsPerPage;
-    const end = Math.min(start + itemsPerPage, items.length);
+    const itemList = document.getElementById('itemList');
 
-    for (let i = start; i < end; i++) {
-        const item = items[i];
-        const li = document.createElement("li");
-        li.className = "item";
-        li.innerHTML = `
-            <div class="cardImg" style="background-image: url(${item.imgSrc})"></div>
-            <div class="cardLow">
-                <h3>${item.title}</h3>
-                <div class="tags">
-                    ${item.tags.map(tag => `<span class="tag">${tag}</span>`).join(' ')}
-                </div>
-            </div>
-        `;
-        itemList.appendChild(li);
+    // clear current items
+    itemList.innerHTML = '';
 
-        li.addEventListener('click', () => {
-            window.location.href = item.link;
+    items.forEach((item) => {
+        const card = document.createElement('div');
+        card.className = 'item';
+
+        const cardImg = document.createElement('div');
+        cardImg.className = 'cardImg';
+        cardImg.style.backgroundImage = 'url(' + item.imgSrc + ')';
+
+        const cardBody = document.createElement('div');
+        cardBody.className = 'cardLow';
+
+        const cardTitle = document.createElement('h5');
+        cardTitle.textContent = item.title;
+        cardBody.appendChild(cardTitle);
+
+        item.tags.forEach((tag) => {
+            const span = document.createElement('span');
+            span.className = 'tag';
+            span.textContent = tag;
+            cardBody.appendChild(span);
         });
-    }
 
-    // Add this code to apply random gradient to tags
-    document.querySelectorAll('.tag').forEach(function(tag) {
-        var colors = ['#0aaecb', '#0fa0f5', '#47c3e2', '#1499e6']; // 그라데이션에 사용할 색상 배열
-        var randomIndex = Math.floor(Math.random() * colors.length); // 랜덤 인덱스 생성
-        var gradient = 'linear-gradient(to right, ' + colors[randomIndex] + ', ' + colors[(randomIndex + 1) % colors.length] + ')'; // 그라데이션 생성
-        tag.style.background = gradient; // 배경색 설정
+        card.appendChild(cardImg);
+        card.appendChild(cardBody);
+
+        const column = document.createElement('div');
+        column.className = 'col-md-6 col-lg-4';  // md 사이즈에선 2개, lg 사이즈에선 3개가 보이도록 변경합니다.
+        column.appendChild(card);
+
+        itemList.appendChild(column);
+
+        // card click event
+        card.addEventListener('click', function() {
+            window.location = item.link;
+        });
     });
 }
 
 
-function changePage(increment) {
-    currentPage += increment;
-    currentPage = Math.max(1, Math.min(currentPage, Math.ceil(items.length / itemsPerPage)));
-
-    paginationButtons[1].textContent = currentPage;
-    paginationButtons[1].classList[currentPage === 1 ? "add" : "remove"]("active");
-
-    renderItems();
-}
-
-renderItems();
+window.onload = renderItems;
