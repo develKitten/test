@@ -24,7 +24,7 @@ const items = [
     },
     {
         title: "VACCINE2",
-        imgSrc: "./vac_img/v2.png",
+        imgSrc: "./vac_img/v2.PNG",
         link: "vaccine/V2/VACCINE2/v2.html",
         tags: ["#1989년", "#LBC"]
     },
