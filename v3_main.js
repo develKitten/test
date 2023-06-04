@@ -151,6 +151,7 @@ const background = document.querySelector('.background-container');
 const fadeOutDuration = 500; 
 const nextPageDelay = 500; 
 
+
 function fadeOutAndNavigate() {
   let opacity = 1;
   const intervalDuration = fadeOutDuration / 100; 
@@ -163,8 +164,13 @@ function fadeOutAndNavigate() {
     if (opacity <= 0) {
       clearInterval(interval); 
       setTimeout(() => {
-
-        window.location.href = 'msdos/tutorial.html'; 
+        var visited = localStorage.getItem('visited'); 
+        if (!visited) {
+          window.location.href = 'msdos/tutorial.html'; 
+        }
+        else {
+          window.location.href = 'msdos/vir_vac/MainList-virus.html';
+        }
       }, nextPageDelay);
     }
   }, intervalDuration);
