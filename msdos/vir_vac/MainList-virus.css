@@ -12,6 +12,12 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'NeoDunggeunmoPro-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* Header */
 
@@ -184,3 +190,171 @@
     margin-right: 5px;
   }
   
+
+/* dialog box */
+
+#dialogBox {
+    display: none;
+    z-index: 3;
+    image-rendering: pixelated;
+    text-transform: uppercase;
+    background-color: #ffffff;
+    border: solid;
+    border-image: url("site_img/dialog-borderbox.png") 8 / 12px 12px 12px 12px stretch;
+    padding: 30px;
+    position: fixed;
+    bottom:0;
+    max-width: 1000px;
+    min-height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    line-height: 1.3;
+    font-size: 30px;
+    font-family: 'NeoDunggeunmoPro-Regular';
+}
+
+#dialogTitle {
+    color: rgb(0, 211, 239);
+    font-family: 'NeoDunggeunmoPro-Regular';
+    font-size: 30px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+#dialogFooter {
+    font-family: 'NeoDunggeunmoPro-Regular';
+    font-size: 30px;
+    cursor: pointer;
+    text-align: end;
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+}
+
+.onani {
+    animation-name: onani;
+    animation-duration: 0.2s;
+}
+
+@keyframes onani {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+}
+
+.offani {
+    animation-name: offani;
+    animation-duration: 0.2s;
+}
+
+@keyframes offani {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+}
+
+
+/* Only Galaxy Fold */
+@media only screen and (max-device-width: 280px){
+    #jsdos {
+        transform: none;
+        transform-origin: top left;
+    }
+
+    .key {
+        padding: 3px;
+        font-size: 12px;
+    }
+
+    #dialogBox {
+        min-height: 80px;
+        margin-top: 60px;
+        font-size: 10px;
+        bottom: initial;
+        top: 0;
+    }
+
+    #dialogFooter {
+        top: initial;
+        bottom: 12px;
+        font-size: 10px;
+    }
+
+    #dialogTitle {
+        font-size: 10px; 
+    }
+}
+
+/* Phone */
+@media only screen and (max-device-width: 740px) and (min-device-width: 280px){  
+    #dialogBox {
+        min-height: 100px;
+        margin-top: 70px;
+        font-size: 13px;
+        padding: 20px;
+        bottom: initial;
+        top: 0;
+    }
+
+    #dialogFooter {
+        top: initial;
+        bottom: 12px;
+        font-size: 15px;
+    }
+
+    #dialogTitle {
+        font-size: 15px; 
+    }
+}
+
+@media only screen and (max-device-width: 540px) and (max-device-height: 720px){
+    #dialogBox {
+        min-height: 100px;
+        margin-top: 60px;
+        font-size: 13px;
+        bottom: initial;
+        top: 0;
+    }
+
+    #dialogFooter {
+        top: initial;
+        bottom: 12px;
+        font-size: 15px;
+    }
+
+    #dialogTitle {
+        font-size: 15px; 
+    }
+
+}
+
+/* ipad, etc. */
+@media only screen and (min-device-width: 740px) and (max-device-width: 912px) {
+    #dialogBox {
+        min-height: 200px;
+        margin-top: 70px;
+        font-size: 25px;
+        bottom: initial;
+        top: 0;
+    }
+
+    #dialogFooter {
+        top: initial;
+        bottom: 12px;
+        font-size: 25px;
+    }
+
+    #dialogTitle {
+        font-size: 25px; 
+    }
+}
