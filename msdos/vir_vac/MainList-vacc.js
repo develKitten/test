@@ -4,7 +4,7 @@ document.querySelector("nav").classList.add("fixed-top");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 180 || document.documentElement.scrollTop > 180) {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     document.querySelector("nav").classList.add("fixed-top");
   } else {
     document.querySelector("nav").classList.remove("fixed-top");
