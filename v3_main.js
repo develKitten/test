@@ -165,6 +165,26 @@ function fadeOutAndNavigate() {
       clearInterval(interval); 
       setTimeout(() => {
         var visited = localStorage.getItem('visited'); 
+        window.location.href = 'msdos/tutorial.html'; 
+      }, nextPageDelay);
+    }
+  }, intervalDuration);
+}
+
+/*
+function fadeOutAndNavigate() {
+  let opacity = 1;
+  const intervalDuration = fadeOutDuration / 100; 
+  const interval = setInterval(() => {
+    opacity -= 0.01; 
+    elements.forEach((element) => {
+      element.style.opacity = opacity;
+      background.style.opacity = opacity;
+    });
+    if (opacity <= 0) {
+      clearInterval(interval); 
+      setTimeout(() => {
+        var visited = localStorage.getItem('visited'); 
         if (!visited) {
           window.location.href = 'msdos/tutorial.html'; 
         }
@@ -175,3 +195,6 @@ function fadeOutAndNavigate() {
     }
   }, intervalDuration);
 }
+
+
+*/
