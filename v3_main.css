@@ -184,14 +184,15 @@ body {
 /* Start Button */
 .start-button {
     font-family: 'NeoDunggeunmoPro-Regular';
-    background-color: #021c447e;
+    background-color: #03142e7e;
     border: none;
     color: white;
     padding: 15px 60px;
     text-align: center;
     text-decoration: none;
-    font-size: 50px;
+    font-size: 45px;
     margin-top: 5%;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3); 
     cursor: pointer;
 }
 
