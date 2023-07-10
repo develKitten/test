@@ -1,11 +1,11 @@
-
 @font-face {
     font-family: 'NeoDunggeunmoPro-Regular';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-}feDistantLight
+}
 
+feDistantLight
 /* PC, Mobile */
 
 * {
@@ -16,6 +16,9 @@
 
 html,
 body {
+
+    margin: 0 !important;
+
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -82,7 +85,7 @@ canvas {
     border-image: url("img/dialog-borderbox.png") 8 / 12px 12px 12px 12px stretch;
     padding: 30px;
     position: fixed;
-    bottom:0;
+    bottom: 0;
     max-width: 1000px;
     min-height: 200px;
     margin-left: auto;
@@ -119,11 +122,11 @@ canvas {
 
 @keyframes onani {
     from {
-      opacity: 0;
+        opacity: 0;
     }
-  
+
     to {
-      opacity: 1;
+        opacity: 1;
     }
 }
 
@@ -134,11 +137,11 @@ canvas {
 
 @keyframes offani {
     from {
-      opacity: 1;
+        opacity: 1;
     }
-  
+
     to {
-      opacity: 0;
+        opacity: 0;
     }
 }
 
@@ -150,7 +153,7 @@ canvas {
     width: 100%;
     margin: auto;
     position: fixed;
-    bottom:0;
+    bottom: 0;
     padding: 15px;
     box-sizing: border-box;
     background-color: #f5f5f5;
@@ -187,7 +190,7 @@ canvas {
 }
 
 /* Only Galaxy Fold */
-@media only screen and (max-device-width: 280px){
+@media only screen and (max-device-width: 280px) {
     #jsdos {
         transform: none;
         transform-origin: top left;
@@ -213,7 +216,7 @@ canvas {
     }
 
     #dialogTitle {
-        font-size: 10px; 
+        font-size: 10px;
     }
 }
 
@@ -236,7 +239,7 @@ canvas {
 
 
 /* Phone */
-@media only screen and (max-device-width: 740px) and (min-device-width: 280px){  
+@media only screen and (max-device-width: 740px) and (min-device-width: 280px) {
     #virtual-keyboard {
         max-height: 200px;
     }
@@ -262,11 +265,11 @@ canvas {
     }
 
     #dialogTitle {
-        font-size: 15px; 
+        font-size: 15px;
     }
 }
 
-@media only screen and (max-device-width: 540px) and (max-device-height: 720px){
+@media only screen and (max-device-width: 540px) and (max-device-height: 720px) {
     #jsdos {
         transform: none;
         transform-origin: top left;
@@ -287,7 +290,7 @@ canvas {
     }
 
     #dialogTitle {
-        font-size: 15px; 
+        font-size: 15px;
     }
 
 }
@@ -318,8 +321,7 @@ canvas {
     }
 
     #dialogTitle {
-        font-size: 25px; 
+        font-size: 25px;
     }
 
 }
-
