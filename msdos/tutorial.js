@@ -30,7 +30,10 @@ document.addEventListener("DOMContentLoaded", function() {
                             ci.simulateKeyEvent(190, false);
                         } else if (value === "bar") {
                             ci.simulateKeyEvent(47, true); 
-                            ci.simulateKeyEvent(47, false); 
+                            ci.simulateKeyEvent(47, false);
+                        } else if (value === "col") {
+                            ci.simulateKeyEvent(58, true); 
+                            ci.simulateKeyEvent(58, false); 
                         } else {
                             const upperCaseValue = value.toUpperCase();
                             const keyCode = upperCaseValue.charCodeAt(0);

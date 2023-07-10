@@ -1,16 +1,62 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>V2.COM</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="v2.css"/>
-  </head>
 
-  <body>
-    <canvas id="jsdos"></canvas>
-    <div class="back" onclick="location.href='../../../MainList-vacc.html';">Back</div>
-    <script src="https://js-dos.com/6.22/current/js-dos.js"></script>
-    <script src="v2.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>V2.COM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="v2.css" />
+</head>
+
+<body>
+  <canvas id="jsdos"></canvas>
+  <div class="back" onclick="location.href='../../../MainList-vacc.html';">Back</div>
+  <div id="virtual-keyboard" style="display: none;">
+    <div class="keyboard-row">
+      <button class="key" value="q">q</button>
+      <button class="key" value="w">w</button>
+      <button class="key" value="e">e</button>
+      <button class="key" value="r">r</button>
+      <button class="key" value="t">t</button>
+      <button class="key" value="y">y</button>
+      <button class="key" value="u">u</button>
+      <button class="key" value="i">i</button>
+      <button class="key" value="o">o</button>
+      <button class="key" value="p">p</button>
+    </div>
+    <div class="keyboard-row">
+      <button class="key" value="a">a</button>
+      <button class="key" value="s">s</button>
+      <button class="key" value="d">d</button>
+      <button class="key" value="f">f</button>
+      <button class="key" value="g">g</button>
+      <button class="key" value="h">h</button>
+      <button class="key" value="j">j</button>
+      <button class="key" value="k">k</button>
+      <button class="key" value="l">l</button>
+      <button class="key" value="Backspace">←</button>
+    </div>
+    <div class="keyboard-row">
+      <button class="key" value="z">z</button>
+      <button class="key" value="x">x</button>
+      <button class="key" value="c">c</button>
+      <button class="key" value="v">v</button>
+      <button class="key" value="b">b</button>
+      <button class="key" value="n">n</button>
+      <button class="key" value="m">m</button>
+      <button class="key" value="Enter">ENTER</button>
+    </div>
+    <button class="key" value="bar">&nbsp/&nbsp</button>
+    <button class="key" value="2">&nbsp2&nbsp</button>
+    <button class="key"
+      value="space">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspspace&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+    <button class="key" value="dot">&nbsp.&nbsp</button>
+    <button class="key" value="col">&nbsp:&nbsp</button>
+    <div class="keyboard-row">
+    </div>
+  </div>
+  <script src="https://js-dos.com/6.22/current/js-dos.js"></script>
+  <script src="v2.js"></script>
+</body>
+
 </html>
