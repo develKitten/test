@@ -4,10 +4,8 @@ Dos(document.getElementById("jsdos"), {
     autolock: false,
 }).ready(function (fs, main) {
   fs.extract("https://raw.githack.com/develKitten/test/main/msdos/vir_vac/vaccine/V1/V1.zip").then(function () {
-    main(["-c", "v2_test.bat"]).then(function (ci) {
+    main(["-c", "v1.bat"]).then(function (ci) {
         window.ci = ci;
     });
   });
 });
-
-// 
