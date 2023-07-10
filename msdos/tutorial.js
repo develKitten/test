@@ -190,7 +190,6 @@ class InteractiveDialogBox extends DialogBox {
         } else {
             // Compare inputString with expectedRegex
             this.result = this.expectedRegex.test(this.inputString) ? 'ok' : 'no';
-    
             this.inputString = '';
     
             // Trigger an event to notify that a check has been made
@@ -350,7 +349,7 @@ let dialogInterMessages_2 = [
 ];
 
 let dialogMessages_3 = [
-    { message: "잘하시는데요? 이번엔 'mkdir 폴더이름'을 명령을 입력하여 새로운 폴더를 생성해보세요.", type: 'text' },
+    { message: "잘하시는데요? 이번엔 'mkdir' 또는 'md' 명령을 입력하여 새로운 폴더를 생성해보세요.", type: 'text' },
     { message: "예를 들어, 'mkdir photos'를 입력하면 'photos'라는 이름의 폴더가 생성됩니다.", type: 'text' }
 ];
 
@@ -366,22 +365,22 @@ dialogBox_2.dialogBox.addEventListener('dialogEnded', () => handleDialogEnded(
 
 
 let dialogInterMessages_3 = [
-    { message: "자, 이제 폴더를 생성해보도록 하죠.<br>명령어 : mkdir [폴더이름] (예시 : mkdir test)", type: 'text' }
+    { message: "자, 이제 폴더를 생성해보도록 하죠.<br>명령어 : mkdir [폴더이름] 또는 md [폴더이름]<br>(예시 : mkdir test 또는 md test)", type: 'text' }
 ];
 
 let dialogMessages_4 = [
     { message: "이번엔 다시 'dir' 명령어를 입력하여 업데이트된 파일과 폴더 목록을 확인해보세요. 새로 생성한 폴더가 목록에 포함되어야 합니다.", type: 'text' }
 ];
 
-interDialogBox_3 = new InteractiveDialogBox(dialogInterMessages_3, "가이드", "^mkdir .+$");
+interDialogBox_3 = new InteractiveDialogBox(dialogInterMessages_3, "가이드", "^(mkdir|md) .+$");
 dialogBox_4 = new DialogBox(dialogMessages_4, "가이드");
 
 
 dialogBox_3.dialogBox.addEventListener('dialogEnded', () => handleDialogEnded(
     interDialogBox_3,
     dialogBox_4,
-    [{ message: "다시 입력하세요.<br>명령어 : mkdir [폴더이름] (예시 : mkdir test)", type: 'text' }],
-    "^mkdir .+$"
+    [{ message: "다시 입력하세요.<br>명령어 : mkdir [폴더이름] 또는 md [폴더이름]<br>(예시 : mkdir test 또는 md test)", type: 'text' }],
+    "^(mkdir|md) .+$"
 ));
 
 let dialogInterMessages_4 = [
@@ -407,7 +406,7 @@ let dialogInterMessages_5 = [
 ];
 
 let dialogMessages_6 = [
-    { message: "이제, 'cd' 명령어를 입력하여 방금 생성한 폴더로 이동해보세요. 예를 들어, 'cd photos'를 입력하면 'photos' 폴더로 이동합니다.", type: 'text' }
+    { message: "이제, chdir 또는 cd 명령어를 입력하여 방금 생성한 폴더로 이동해보세요. 예를 들어, 'cd photos'를 입력하면 'photos' 폴더로 이동합니다.", type: 'text' }
 ];
 
 dialogBox_6 = new DialogBox(dialogMessages_6, "가이드");
@@ -421,7 +420,7 @@ dialogBox_5.dialogBox.addEventListener('dialogEnded', () => handleDialogEnded(
 ));
 
 let dialogInterMessages_6 = [
-    { message: "자, 이제 폴더 안으로 이동해봅시다!<br>명령어 : cd [폴더 명] (예시 : cd test)", type: 'text' }
+    { message: "자, 이제 폴더 안으로 이동해봅시다!<br>명령어 : chdir [폴더 명] 또는 cd [폴더 명]<br>(예시 : chdir test 또는 cd test)", type: 'text' }
 ];
 
 let dialogMessages_7 = [
@@ -429,13 +428,13 @@ let dialogMessages_7 = [
 ];
 
 dialogBox_7 = new DialogBox(dialogMessages_7, "가이드");
-interDialogBox_6 = new InteractiveDialogBox(dialogInterMessages_6, "가이드", "cd .+$");
+interDialogBox_6 = new InteractiveDialogBox(dialogInterMessages_6, "가이드", "^(cd |chdir ).+");
 
 dialogBox_6.dialogBox.addEventListener('dialogEnded', () => handleDialogEnded(
     interDialogBox_6,
     dialogBox_7,
-    [{ message: "다시 입력하세요.<br>명령어 : cd [폴더 명] (예시 : cd test)", type: 'text'}],
-    "cd .+$"
+    [{ message: "다시 입력하세요.<br>명령어 : chdir [폴더 명] 또는 cd [폴더 명]<br>(예시 : chdir test 또는 cd test)", type: 'text'}],
+    "^(cd |chdir ).+"
 ));
 
 
@@ -449,13 +448,13 @@ let dialogMessages_8 = [
 ];
 
 dialogBox_8 = new DialogBox(dialogMessages_8, "가이드");
-interDialogBox_7 = new InteractiveDialogBox(dialogInterMessages_7, "가이드", "cd \.\.");
+interDialogBox_7 = new InteractiveDialogBox(dialogInterMessages_7, "가이드", "(cd|cd |chdir )\.\.");
 
 dialogBox_7.dialogBox.addEventListener('dialogEnded', () => handleDialogEnded(
     interDialogBox_7,
     dialogBox_8,
     [{ message: "다시 입력하세요.<br>명령어 : cd ..", type: 'text' }],
-    "cd \.\."
+    "(cd|cd |chdir )\.\."
 ));
 
 
