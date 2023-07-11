@@ -306,10 +306,10 @@ let dialogInterMessages_1 = [
   { message: "V2 plus 프로그램을 실행시켜봅시다.<br>명령어 : V2PLUS A:", type: 'text' }
 ];
 
-interDialogBox_1 = new InteractiveDialogBox(dialogInterMessages_1, "가이드", "^(v2plus|V2PLUS|v2plus.com|V2PLUS.COM) (a|A):");
+interDialogBox_1 = new InteractiveDialogBox(dialogInterMessages_1, "가이드", "^(v2plus|V2PLUS|v2plus.com|V2PLUS.COM) (a|A)(:?)");
 
 handleDialogEnded(
   interDialogBox_1,
   [{ message: "다시 입력하세요.<br>명령어 : V2PLUS A:", type: 'text' }],
-  "^(v2plus|V2PLUS|v2plus.com|V2PLUS.COM) (a|A):"
+  "^(v2plus|V2PLUS|v2plus.com|V2PLUS.COM) (a|A)(:?)"
 );

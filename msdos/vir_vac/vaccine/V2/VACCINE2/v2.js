@@ -306,10 +306,10 @@ let dialogInterMessages_1 = [
   { message: "VACCINE 2 프로그램을 실행시켜봅시다.<br>명령어 : V2 A:", type: 'text' }
 ];
 
-interDialogBox_1 = new InteractiveDialogBox(dialogInterMessages_1, "가이드", "^(v2|V2|v2.com|V2.COM) (a|A):");
+interDialogBox_1 = new InteractiveDialogBox(dialogInterMessages_1, "가이드", "^(v2|V2|v2.com|V2.COM) (a|A)(:?)");
 
 handleDialogEnded(
   interDialogBox_1,
   [{ message: "다시 입력하세요.<br>명령어 : V2 A:", type: 'text' }],
-  "^(v2|V2|v2.com|V2.COM) (a|A):"
+  "^(v2|V2|v2.com|V2.COM) (a|A)(:?)"
 );
