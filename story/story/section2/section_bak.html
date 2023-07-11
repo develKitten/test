@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="img/t-img.png" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="section.css">
+  <link rel="stylesheet" href="book.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <title>보안 박물관 - 인물전</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="img/logo.png" class="logo" alt="로고 이미지" style="width: 180px;">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item">
+            <a class="nav-link" href="../section1/section.html">#1. 컴퓨터와의 첫 만남</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../section2/section.html">#2. 처음 백신 만든 날</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">#3. 범람하는 바이러스</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">#4. 사용자를 위하여</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">#5. 안녕, 의사직</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Content Sections -->
+
+  <div class="video_section mx-auto d-flex flex-column align-items-center">
+    <h3 class="display-5 display-md-1 my-5">#2. 최초의 컴퓨터 바이러스 상륙</h3>
+    <p class="gray">88년 초에 잡지를 통해 브레인 바이러스라는 것이 한국에 상륙한 걸 알게 되었다.</p>
+    <p class="gray">그 사실을 알게 된 지 얼마 지나지 않아 나도 그놈의 예기치 않은 방문을 받게 되었다.</p>
+    <p class="gray">-'별난 컴퓨터 의사 안철수', 처음 백신 만든 날 中 </p>
+    <p></p>
+    <div class="embed-responsive embed-responsive-16by9" style="max-width: 1000px;">
+      <video class="embed-responsive-item" controls autoplay>
+        <source src="video/computer.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="row">
+      <div class="col-lg-8 mx-auto"> <!-- 본문 -->
+
+        <p><span class="sub-title">Apple II+ 컴퓨터와 만나다</span></p>
+
+        <blockquote class="blockquote p-3 rounded"><!-- 인용문구 -->
+          <p class="quote-header"><img src="img/따옴표.png" class="quote-dot" /></p>
+          <p class="mb-0">인용문 내용</p>
+          <footer class="blockquote-footer">인용 출처</footer>
+        </blockquote>
+
+        <p class="text">안철수님은 코딩도 잘하시고 인성도 좋으시다</p>
+        <p class="text">안철수님은 코딩도 잘하시고 인성도 좋으시다</p>
+        <p class="text">안철수님은 코딩도 잘하시고 인성도 좋으시다</p>
+
+        <p class="text"><span class="sub-title">전기 생리학에서의 응용</span></p>
+        <p class="text">안철수님은 코딩도 잘하시고 인성도 좋으시다</p>
+
+        <div class="slide-format">
+          <!-- 이미지 슬라이드 -->
+          <div id="myCarousel" class="carousel slide  justify-content-center align-items-center" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="img/sim/sim1.webp" alt="이미지 1">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="img/sim/sim2.webp" alt="이미지 2">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="img/sim/sim3.webp" alt="이미지 3">
+              </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+          </div>
+
+          <!-- 슬라이드 캡션 -->
+          <div class="cap-box">
+            <p class="caption">
+              <a class="caption_font" data-toggle="collapse" href="#collapse1" role="button" aria-expanded="false"
+                aria-controls="collapse1">
+                전기 생리학에서의 시뮬레이션 그래프 <설명 보기>
+              </a>
+            </p>
+            <div class="collapse" id="collapse1">
+              <div class="card card-body">
+                1988년 4월 잡지에 기고한 '시뮬레이션' 글의 프로그램을 구현한 것입니다.<br>전기 생리학에서는 신경 세포에서 발생하는 전압을 측정하여 시뮬레이션하였습니다.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="image-format">
+          <!-- 이미지 -->
+          <div id="myCarousel" class="carousel slide  justify-content-center align-items-center" data-ride="carousel">
+            <img class="d-block w-100" src="img/maso/창간지.webp" alt="이미지 3">
+          </div>
+
+          <!-- 캡션 -->
+          <div class="cap-box">
+            <p class="caption">
+              <a class="caption_font" data-toggle="collapse" href="#img1" role="button" aria-expanded="false"
+                aria-controls="img1">
+                마이크로소프트웨어 창간지 <설명 보기>
+              </a>
+            </p>
+            <div class="collapse" id="img1">
+              <div class="card card-body">
+                마이크로소프트웨어는 한국에서 최초로 발간된 컴퓨터 소프트웨어 전문 잡지로, 그 시절의 가장 최신의 기술에 대해 다뤘습니다.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="text"><span class="sub-title">컴퓨터 잡지의 저자가 되다</span></p>
+        <p class="text">아래의 페이지를 직접 넘겨보세요!</p>
+
+        <div class="cover"> <!-- 책 효과 -->
+          <div class="book">
+            <label for="page-1" class="book__page book__page--1"> <!-- 보안 박물관 페이지 -->
+              <img src="img/maso/maso4_0.jpg" alt="">
+            </label>
+
+            <label for="page-2" class="book__page book__page--4"> <!-- end 페이지 -->
+              <div class="page__content">
+                <img src="img/maso/maso4_3.jpg" alt="" class="book-page-image">
+              </div>
+            </label>
+
+            <!-- Resets the page -->
+            <input type="radio" name="page" id="page-1" />
+
+            <!-- Goes to the second page -->
+            <input type="radio" name="page" id="page-2" />
+            <label for="page-2" class="book__page book__page--2">
+              <div class="book__page-front">
+                <img src="img/maso/maso4_1.png" alt="" class="book-page-image">
+              </div>
+              <div class="book__page-back">
+                <img src="img/maso/maso4_2.jpg" alt="" class="book-page-image">
+              </div>
+            </label>
+
+          </div>       
+        </div>
+        <!-- 캡션 -->
+        <div class="cap-box">
+            <p class="caption">
+              <a class="caption_font" data-toggle="collapse" href="#img2" role="button" aria-expanded="false"
+                aria-controls="img2">
+                「시뮬레이션」 잡지의 일부 페이지 <설명 보기>
+              </a>
+            </p>
+            <div class="collapse" id="img2">
+              <div class="card card-body">
+                마이크로소프트웨어 1988년 4월호에 기고된 잡지. 축소지향적 접근법과 종합적 접근법에 대한 설명과 시뮬레이션 과정이 담겨있습니다.
+              </div>
+            </div>
+        </div>           
+
+      </div>
+    </div>
+
+    <!-- Button to next section -->
+    <a class="btn btn-primary mt-4" href="#section2">다음 섹션으로</a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <p>© 보안 박물관 인물전 : 별난 컴퓨터 의사 안철수</p>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="section.js"></script>
+
+</body>
+
+</html>

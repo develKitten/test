@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="img/t-img.png" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="section.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <title>보안 박물관 - 인물전</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="img/logo.png" class="logo" alt="로고 이미지" style="width: 180px;">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item">
+            <a class="nav-link" href="../section1/section.html">#1. 컴퓨터와의 첫 만남</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../section2/section.html">#2. 처음 백신 만든 날</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../section3/section.html">#3. 범람하는 바이러스</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">#4. 사용자를 위하여</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">#5. 안녕, 의사직</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Content Sections -->
+
+  <div class="video_section mx-auto d-flex flex-column align-items-cen ter">
+    <h3 class="display-5 display-md-1 my-5">#3. 범람하는 바이러스들</h3>
+    <p class="gray">사람에게 이로운 컴퓨터 바이러스는, 애초에 존재하지 않는다.</p>
+    <p class="gray">컴퓨터 바이러스는 원래 컴퓨터가 수행해야 할 기능을 방해하는 것이 될 뿐이다.</p>
+    <p class="gray">백신을 만들면서도, 불현듯 사람 사이에 왜 이런 쓸데없는 지능 소모전을 치러야 하나 하는 서글픈 생각이 든다. </p>
+    <p class="gray">-'별난 컴퓨터 의사 안철수', 해커와의 칠 년 전쟁 中 </p>
+    <p></p>
+    <div class="embed-responsive embed-responsive-16by9" style="max-width: 1000px; background-color: black;">
+      <video class="embed-responsive-item" controls autoplay>
+        <source src="video/computer.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="row">
+      <div class="main-content col-lg-8 mx-auto"> <!-- 본문 -->
+
+        <!--------------------------- 브레인 바이러스, 국내 상륙 ------------------------------>
+        <p class="text"><span class="sub-title">브레인 바이러스, 국내 상륙</span></p>
+        <p class="text">컴퓨터를 접한 이후, 책으로써 컴퓨터 잡지를 즐겨봤던 안철수.</p>
+        <p class="text">그러던 1988년 초반, 컴퓨터 잡지를 통해 '컴퓨터 바이러스'라는 것이 한국에 상륙했다는 소식을 보게 됩니다.</p>
+
+
+        <div class="image-format">
+          <!-- 이미지 -->
+          <div id="myCarouse" class="carousel slide  justify-content-center align-items-center" data-ride="carouse0">
+            <img class="d-block w-100 lazyload" src="img/감염.png" alt="감염된 플로피 디스크">
+          </div>
+
+          <!-- 캡션 -->
+          <div class="cap-box">
+            <p class="caption">
+              <a class="caption_font" data-toggle="collapse" href="#img3" role="button" aria-expanded="false"
+                aria-controls="img3">
+                (c)Brain에 감염된 플로피 디스크 <설명 보기>
+              </a>
+            </p>
+            <div class="collapse" id="img3">
+              <div class="card card-body">
+                초창기 컴퓨터 바이러스는, 디스켓을 읽어들이려 할 때 사용자가 원치 않은 행동을 하며 다른 디스켓을 감염시켰습니다. 여기서 감염이란, 자신의 악성코드를 다른 곳에 복사하는 행위를 일컫습니다.
+              </div>
+            </div>
+          </div>
+        </div>
+        <p><br></p>        
+
+
+        <!-- Button to next section -->
+        <a class="btn btn-dark mt-4" href="../section3/section.html">다음 섹션으로</a>
+        <p><br><br></p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container">
+        <p>© 보안 박물관 인물전 : 별난 컴퓨터 의사 안철수</p>
+      </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lazysizes.min.js"></script>
+    <script src="section.js"></script>
+
+</body>
+
+</html>

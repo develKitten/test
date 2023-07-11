@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="img/t-img.png" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="section.css">
+  <link rel="stylesheet" href="card.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <title>보안 박물관 - 인물전</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="img/logo.png" class="logo" alt="로고 이미지" style="width: 180px;">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item">
+            <a class="nav-link" href="../section1/section.html">#1. 컴퓨터와의 첫 만남</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../section2/section.html">#2. 처음 백신 만든 날</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../section3/section.html">#3. 범람하는 바이러스</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../section4/section.html">#4. 사용자를 위하여</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../section5/section.html">#5. 안녕, 의사직</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Content Sections -->
+
+  <div class="video_section mx-auto d-flex flex-column align-items-center">
+    <h3 class="display-5 display-md-1 my-5">#3. 범람하는 바이러스들</h3>
+    <p class="gray">사람에게 이로운 컴퓨터 바이러스는, 애초에 존재하지 않는다.</p>
+    <p class="gray">컴퓨터 바이러스는 원래 컴퓨터가 수행해야 할 기능을 방해하는 것이 될 뿐이다.</p>
+    <p class="gray">백신을 만들면서도, 불현듯 사람 사이에 왜 이런 쓸데없는 지능 소모전을 치러야 하나 하는 서글픈 생각이 든다. </p>
+    <p class="gray">-'별난 컴퓨터 의사 안철수', 해커와의 칠 년 전쟁 中 </p>
+    <p></p>
+    <div class="embed-responsive embed-responsive-16by9" style="max-width: 1000px; background-color: black;">
+      <video class="embed-responsive-item" controls autoplay>
+        <source src="video/computer.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <p class="gray"><br>♪ Rock Tune -  Audionautix</p>
+  </div>
+
+
+  <div class="section">
+    <div class="row">
+      <div class="main-content col-lg-8 mx-auto"> <!-- 본문 -->
+        <!----------------------------- 변형 컴퓨터 바이러스의 등장 -------------------------------->
+        <p class="text"><span class="sub-title">변형 컴퓨터 바이러스의 등장</span></p>
+        <p class="text">1988년까지만 해도 단순히 사람들을 놀라게 할 목적으로 바이러스가 생성되었던 반면,</p>
+        <p class="text">1989년이 되자 여러 바이러스들이 출몰하게 되었고, 이때부터 본격적으로 사람들에게 큰 피해를 입히게 됩니다.</p>
+
+        <p class="text"><br>그 중에서도 특히 무서운 것은 <b>LBC 바이러스</b>였습니다.</p>
+        <p class="text">LBC 바이러스는 하드 디스크에도 감염시켜, 컴퓨터를 아예 사용할 수 없는 상태로 만드는 무서운 바이러스였습니다.
+        </p>
+        <p class="text"><br>1989년 9월, 많은 잡지를 통해 LBC 바이러스가 보도된 것을 본 그는, LBC 바이러스를 분석하는 과정에서 큰 충격을 받게 됩니다.</p>
+
+        <p><br></p>
+        <div class="image-format">
+          <!-- 이미지 -->
+          <div id="myCarouse" class="carousel slide  justify-content-center align-items-center" data-ride="carouse0">
+            <img class="d-block w-100 lazyload lazyload" src="img/lbc_virus.png" alt="분석된 LBC 바이러스의 특징">
+          </div>
+
+          <!-- 캡션 --> 
+          <div class="cap-box">
+            <p class="caption">
+              <a class="caption_font" data-toggle="collapse" href="#img1" role="button" aria-expanded="false"
+                aria-controls="img1">
+                안철수님이 LBC 바이러스를 정리한 내용의 일부 <설명 보기>
+              </a>
+            </p>
+            <div class="collapse" id="img1">
+              <div class="card card-body">
+                LBC 바이러스는 1989년 10월 김한수씨에 의해 명명된 바이러스로서, 플로피 디스크 뿐만 아니라 하드디스크를 망가뜨리는 능력이 있어 많은 사람들에게 큰 피해를 주었습니다.
+                <br><br>
+                <p style="color: rgb(160, 160, 160);">출처 : 안철수, '백신 II, 브레인 바이러스와 LBC 바이러스 퇴치 프로그램', 마이크로소프트웨어 1989년
+                  11월호. pp 214-238.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p><br></p>
+
+        <p class="text">이는 첫째, LBC 바이러스는 <b>브레인 바이러스의 변형판</b>이었던 점입니다.</p>
+        <p class="text">프로그램의 실행 흐름이 브레인 바이러스와 매우 유사했고 필요없는 기능만 제거된 것이었습니다.</p>
+        <p class="text">단지 디스크의 범위 제한을 없애 하드디스크도 감염시킬 수 있게 한 것일 뿐이었지만, 디스크 구조의 차이로 인해 시스템이 파괴되는 능력을 가지게 되었습니다.</p>
+
+        <p class="text"><br><br>그리고 둘째, 이 바이러스의 제작자가 어린 국내 학생일 것으로 보이는 부분이었습니다.</p>
+        <p class="text">프로그램을 뜯어보았을 때 보이는 <b>' virse program messge Njh to Lbc '</b> 문구에서 'virse', 'messge'와 같은 잘못된 철자와
+          Njh라는 사람 이니셜,</p>
+        <p class="text">해외에서는 보고된 적 없는 유래없는 바이러스라는 점에서 이 부분을 쉽게 유추할 수 있었습니다.</p>
+
+        <p class="text"><br><br><br>당시 바이러스라는 것은 정신적으로 나약한 해외에서만 만들어질 것으로 믿어왔던 안철수님은, 국내에서도 컴퓨터 바이러스를 개발하는 사람이 있었다는 것에 큰 절망을 느꼈습니다.</p>
+        <p class="text">그는 브레인 바이러스와 LBC 바이러스를 퇴치할 수 있는 백신 II 프로그램을 개발하면서, 바이러스를 만든 사람들을 강하게 비판했습니다.</p>
+
+        <p><br></p>
+        <div class="image-format">
+          <!-- 이미지 -->
+          <div id="myCarouse" class="carousel slide  justify-content-center align-items-center" data-ride="carouse0">
+            <img class="d-block w-100 lazyload lazyload" src="img/lbc_v2.jpg" alt="당시 안철수님이 분석한 LBC 바이러스의 특징">
+          </div>
+
+          <!-- 캡션 -->
+          <div class="cap-box">
+            <p class="caption">
+              <a class="caption_font" data-toggle="collapse" href="#img2" role="button" aria-expanded="false"
+                aria-controls="img2">
+                컴퓨터 잡지에 발표된 백신II 프로그램 <설명 보기>
+              </a>
+            </p>
+            <div class="collapse" id="img2">
+              <div class="card card-body">
+                백신II 프로그램은 1989년 10월에 개발한 프로그램이며, 발표된 기고글에서는 하드디스크의 구조와 바이러스의 특징, 치료법 등의 내용을 담고 있습니다.
+                <br><br>
+                <p style="color: rgb(160, 160, 160);">출처 : 안철수, '백신 II, 브레인 바이러스와 LBC 바이러스 퇴치 프로그램', 마이크로소프트웨어 1989년
+                  11월호. pp 214-238.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <blockquote class="blockquote custom-blockquote p-3 rounded"><!-- 인용문구 -->
+          <p class="mb-0"><b>바이러스를 만든 인간은 파렴치한이며, 이 사회의 바이러스 그 자체이다!</b> 아무리 이렇게 외쳐도 바이러스의 피해는 점점 늘어만 가니 이 일을 어쩐단 말인가!
+          </p>
+        </blockquote>
+
+        <p class="text">그러면서 <b>"국내 컴퓨터 사용자들 중에서 이러한 몰지각한 부류가 있다는 사실에 정말 서글픔을 금할 수 없다"</b> 라는 심정을 토로하였습니다.</p>
+        <p class="text"><br><br>그의 마음아픈 외침에도 불구, 이후에도 다양하게 발간되던 바이러스 악서에 의해 공개된 코드를 활용한 바이러스들이 많이 제작되었습니다.
+          <br><br>그가 나서지 않으면, 바이러스들은 홀씨처럼 퍼져나가 사람들의 컴퓨터를 위협하는 안타까운 현상이 발생했습니다.<br>
+        </p>
+        <p class="text"><br>그런 악의적인 국내 컴퓨터 바이러스 제작자들에 대해, 안철수님은 다음과 같이 호소했습니다.<br><br></p>
+
+        <blockquote class="blockquote p-3 rounded"><!-- 인용문구 -->
+          <p class="quote-header"><img src="img/따옴표.png" class="quote-dot" /></p>
+          <p class="mb-0">외국의 컴퓨터 바이러스 제작자들에게는 직접 손을 쓸 수 없더라도, 국내 바이러스 제작자들에 대해서는 정말 안타깝게 호소하고 싶은 심정이다.</p>
+          <p class="mb-0"><br>우리들은 하루 빨리 선진국들을 따라잡기 위해 힘을 합쳐 노력하고 있다. 좋은 프로그램을 만드는데도 시간이 부족한 우리 프로그래머들을 도와주지는 못할 망정,
+            <b>한국산 바이러스를 만들어서 프로그래머들의 시간을 빼앗는 행위는 결국 우리의 발전을 스스로 막는 행위일 것</b>이다.
+          </p>
+          <p class="mb-0"><br>한 쪽에서는 컴퓨터 바이러스를 열심히 만들고, 다른 쪽에서는 이에 대항하는 백신 프로그램을 열심히 만든다면 결국 남는 것은 하나도 없다.</p>
+          <br>
+          <footer class="blockquote-footer">「별난 컴퓨터 의사 안철수」, 컴퓨터 바이러스를 만드는 사람들 中 </footer>
+        </blockquote>
+        <p><br><br></p>
+        <!----------------------------- 컴퓨터 바이러스의 범람 -------------------------------->
+        <p class="text"><span class="sub-title">컴퓨터 바이러스의 범람</span></p>
+
+        <p class="text">계속 생성되는 변형 바이러스들로 인한 피해를 걱정했던 안철수님은, 바이러스 분석글을 더 이상 공개하지 않았습니다.</p>
+        <p class="text">그러나, 여전히 컴퓨터 바이러스에 대한 간단한 정보를 얻고 싶어하는 사람이 많았기 때문에, 바이러스로 인한 증상, 치료법 및 예방법에 대한 글들을 주로 잡지에 기고하였습니다.</p>
+
+        <p><br></p>
+        <div class="image-format">
+          <!-- 이미지 -->
+          <div id="myCarouse" class="carousel slide  justify-content-center align-items-center" data-ride="carouse0">
+            <img class="d-block w-100 lazyload lazyload" src="img/vn.webp" alt="바이러스 뉴스 시리즈">
+          </div>
+
+          <!-- 캡션 -->
+          <div class="cap-box">
+            <p class="caption">
+              <a class="caption_font" data-toggle="collapse" href="#img3" role="button" aria-expanded="false"
+                aria-controls="img3">
+                컴퓨터 바이러스 정보를 담은 책 <설명 보기>
+              </a>
+            </p>
+            <div class="collapse" id="img3">
+              <div class="card card-body">
+                바이러스 뉴스 1호는 1990년 7월, 바이러스 뉴스 2호는 1991년 2월에 출판된 서적입니다. 잡지를 통해 공개했던 바이러스 정보들을 좀 더 자세히 기록하였고, 바이러스에 얽힌
+                이야기들도 다루고 있습니다.
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p><br></p>
+
+        <p class="text">또한 이러한 내용을 정리하고 바이러스 탄생 이야기 등을 추가하여, 최대한 많은 사람이 볼 수 있도록 바이러스 책을 출판하였습니다.</p>
+        <p class="text"><br></p>
+
+        <p class="text">그러던 중, 1990년 국내 사용자들은 무려 <b>28개의 국내외 컴퓨터 바이러스</b>들을 맞이하였습니다.</p>
+        <p class="text">특히 특정 날짜가 되면 활발하게 활동하는 컴퓨터 바이러스들이 많아지게 되었으며, 이제는 디스크 뿐만 아니라 파일까지 파괴하거나 삭제하는 악랄한 컴퓨터 바이러스들이
+          등장했습니다.</p>
+        <p class="text"><br>안철수님은 당시 방문연구원이나 교수직으로 인해 바빴으나, 전국가적인 피해를 손 놓고 볼 수 없었기에 결국 자신의 시간을 쪼개어 백신 프로그램을 업그레이드하기 시작했습니다.<br></p>
+
+        <blockquote class="blockquote p-3 rounded"><!-- 인용문구 -->
+          <p class="quote-header"><img src="img/따옴표.png" class="quote-dot" /></p>
+          <p class="mb-0">필자는 앞으로 국내에서 발견되는 모든 바이러스 프로그램에 대한 치료기능을 백신II 플러스에 추가시켜서, 이것을 우리나라의 실정에 맞는 한국형 백신 프로그램으로 만들고자
+            한다.</p>
+          <p class="mb-0">이러한 일들이 선량한 사용자들의 컴퓨터 바이러스에 의한 피해를 최소화할 수만 있다면 필자는 더 바랄 것이 없겠다.</p>
+          <br>
+          <footer class="blockquote-footer">「마이크로소프트웨어」, 예루살렘 바이러스 퇴치 기능이 추가된 백신II Plus(1989년 12월) 中 </footer>
+        </blockquote>
+
+        <p class="text"><br>아마추어인 자신이 혼자서 막을 수 있다면 다른 프로그래머들은 다른 좋은 프로그램을 만드는 일에 전념할 수 있을 것이라 생각했던 안철수.</p>
+        <p class="text">그는 사명감을 가지고, 새벽 세 시에 일어나서 여섯시까지 열심히 백신 프로그램을 개발하고, 학교에 가서는 열심히 실험에 몰두하는 이중적인 생활을 하였습니다.</p>
+
+        <br>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide card">
+              <div class="thumbnail">
+                <img src="img/V2.png" alt="" />
+              </div>
+              <div class="title-container">
+                <h3>VACCINE II</h3>
+              </div>
+              <div class="description">
+                백신II 프로그램은 1989년 10월 개발되었으며, brain 바이러스와 LBC 바이러스를 퇴치할 수 있는 프로그램이었습니다.
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <div class="thumbnail">
+                <img src="img/v2_plus_1_2.PNG" alt="" />
+              </div>
+              <div class="title-container">
+                <h3>V2 Plus</h3>
+              </div>
+              <div class="description">
+                백신II Plus는 1989년 12월부터 1990년 10월까지 개발되었으며, 10여종의 컴퓨터 바이러스들을 퇴치하였습니다.
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <div class="thumbnail">
+                <img src="img/V3.png" alt="" />
+              </div>
+              <div class="title-container">
+                <h3>V3 테스트 버전</h3>
+              </div>
+              <div class="description">
+                백신III 테스트 버전은 1990년 12월에 공개되었으며, 총 34종의 바이러스를 치료할 수 있는 복합적인 기능을 갖췄습니다.
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <div class="thumbnail">
+                <img src="img/vac3.jpg" alt="" />
+              </div>
+              <div class="title-container">
+                <h3>V3 정식 버전</h3>
+              </div>
+              <div class="description">
+                백신III 정식 버전은 1991년 2월에 공개되었으며, 치료 가능한 바이러스 수를 바로 알 수 있도록 이름 뒤에 버전을 붙였습니다.
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="cap-box">
+          <p class="caption">
+            <a class="caption_font" data-toggle="collapse" href="#img3" aria-expanded="false">
+              백신 시리즈의 발전 변천사 <옆으로 스크롤하세요!>
+            </a>
+          </p>
+        </div>
+
+        <blockquote class="blockquote p-3 rounded"><!-- 인용문구 -->
+          <p class="quote-header"><img src="img/따옴표.png" class="quote-dot" /></p>
+          <p class="mb-0">나는 컴퓨터 바이러스에 의한 전국가적인 피해를 최소한으로 줄이기 위해서, 지난 시간동안 내 나름대로 정열을 바쳐 백신 프로그램을 만들어 왔다.</p>
+          <p class="mb-0">또한, 우리나라가 빠른 시일내에 정보화 사회로 발전하는데 조금이라도 보탬이 되었으면 하는 바람에서 백신 프로그램을 무료로 보급해 왔다.</p>
+          <br>
+          <footer class="blockquote-footer">「별난 컴퓨터 의사 안철수」, 백신 연구소의 설립을 추진하면서 中 </footer>
+        </blockquote>
+
+        <p class="text"><br><b>이러한 바이러스와의 치열한 사투는, 심지어 군대를 가기 직전에도 계속되었습니다.</b></p>   
+        <p class="text">1990년 10월, 박사 논문심사가 끝나자마자 안철수는 신종 컴퓨터 바이러스들의 심각성을 인지하게 됩니다.<br><br>"다크 어벤져"와 같은 파괴적인 바이러스가 사용자들에게 큰 피해를 주고 있었고, 특히 컴퓨터 통신의 활성화로 인해 바이러스들이 급속히 확산되고 있었습니다.</p>
+        <p class="text"><br>이런 상황 속에서 안철수는 새로운 백신 프로그램의 필요성을 느끼고, 논문심사로 바빴던 기간을 뒤로하고 잠을 줄여가며 한 달간 신종 바이러스를 분석하였습니다.</p>
+        <p><br></p>
+        <div class="image-format">
+          <!-- 이미지 -->
+          <div id="myCarouse" class="carousel slide  justify-content-center align-items-center" data-ride="carouse0">
+            <img class="d-block w-100 lazyload lazyload" src="img/범람바이러스.jpg" alt="당시 안철수님이 분석한 LBC 바이러스의 특징">
+          </div>
+
+          <!-- 캡션 -->
+          <div class="cap-box">
+            <p class="caption">
+              <a class="caption_font" data-toggle="collapse" href="#img4" role="button" aria-expanded="false"
+                aria-controls="img4">
+                '범람하는 바이러스들' 기고글 <설명 보기>
+              </a>
+            </p>
+            <div class="collapse" id="img4">
+              <div class="card card-body">
+                끊임없는 버전업을 거쳐, 현재 우리가 알고 있는 V3(VACCINE III)가 탄생하는 순간입니다. 사용자들의 피해를 줄이기 위해 일찍 공개되었으며, 정식 버전은 그가 군대 간 직후 출판된 '바이러스뉴스 2호'에 공개되었습니다. 
+                <br><br>
+                <p style="color: rgb(160, 160, 160);">출처 : 안철수, '범람하는 신종 바이러스들 - 백신III 시험용 버전을 발표하며', 마이크로소프트웨어 1990년
+                  12월호.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p><br></p>     
+        <p class="text">노력의 결과로 <b>백신 III(VACCINE III)</b>의 시험용 버전이 완성되자마자, 1990년 12월 긴급하게 발표했습니다.</p>
+
+        <blockquote class="blockquote custom-blockquote p-3 rounded"><!-- 인용문구 -->
+          <p class="mb-0">원래 백신 III에 다른 많은 추가 기능들을 보강해서 정식 버전으로 발표할 계획이었다.</p>
+          <p class="mb-0">그러나 최근에 여러가지 바이러스들이 급속하게 퍼지고 있어서 하루라도 빨리 백신 프로그램을 공개해야 할 필요성이 대두되었으며,</p>
+          <p class="mb-0">정식 버전을 내기 전에 먼저 사용자들로부터 추가해야 할 기능들에 대한 의견을 물어볼 필요성이 있다는 판단하에 시험용 버전을 우선 발표하게 되었다.</p>
+          <br>
+          <footer class="blockquote-footer">「마이크로소프트웨어」, 범람하는 신종 바이러스들(1990년 12월) 中 </footer>
+        </blockquote>        
+
+        <p class="text"><br>이후 지속적으로 백신 기능을 개선하며 치료 가능한 바이러스의 수를 늘리는데 주력하였고, 군대를 간 직후인 1991년 2월 "바이러스 뉴스 2호"를 통해 백신 III의 정식 버전이 발표되었습니다.</p>
+        <p class="text">백신 III는 국내에서 발견된 30여종의 바이러스뿐만 아니라 아직 발견되지 않은 7종의 바이러스를 치료할 수 있도록 설계되었습니다.</p>
+
+        <p class="text"><br><br><br><b>입대하기 직전까지도 결코 한눈팔지 못하고, 백신을 개발하는 데 온 힘을 쏟을 수 밖에 없었던 의사 안철수.</b></p>
+        <p class="text">그의 끊임없는 헌신으로 인해, 일반 사용자들은 물론 기업이나 공공기관에서의 자료 소실로 인한 피해를 크게 줄일 수 있었습니다.</p>
+        <br><br>
+
+        <!-- Button to next section -->
+        <a class="btn btn-dark mt-4" href="../section4/section.html">다음 섹션으로</a>
+        <p><br><br></p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container">
+        <p>© 보안 박물관 인물전 : 별난 컴퓨터 의사 안철수</p>
+      </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lazysizes.min.js"></script>
+    <script src="section.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      let swiper = new Swiper(".swiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          600: {
+            slidesPerView: 2,
+          },
+        },
+      });
+    </script>
+
+</body>
+
+</html>
