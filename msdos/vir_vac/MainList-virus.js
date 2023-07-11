@@ -56,7 +56,13 @@ const items = [
         title: "월드컵 바이러스",
         imgSrc: "./vir_img/2002.png",
         link: "virus/worldcup/worldcup.html",
-        tags: ["#한국"] 
+        tags: ["#한국", "#파일_바이러스"] 
+    },
+    {
+        title: "우주여행 바이러스",
+        imgSrc: "./vir_img/우주여행.png",
+        link: "virus/cosmos/cosmos.html",
+        tags: ["#외국"] 
     }
 ];
 
